@@ -10,12 +10,12 @@ DEFAULT_DIR = 'manual-install/'
 ELISP_LIST = {
   'init-loader' => { 
     dir: DEFAULT_DIR, 
-    url: 'http://coderepos.org/share/browser/lang/elisp/init-loader/init-loader.el'
+    url: 'http://coderepos.org/share/browser/lang/elisp/init-loader/init-loader.el?format=txt'
   },
 
   'auto-install' => {
     dir: DEFAULT_DIR,
-    url: 'http://www.emacswiki.org/emacs/auto-install.el'
+    url: 'http://www.emacswiki.org/emacs/download/auto-install.el'
   }
 }
 
@@ -23,7 +23,7 @@ download_command = :curl
 
 def install(dir, url, command, elisp)
   if command == :curl
-    system("curl -o #{DOT_EMACS_ROOT}#{dir}#{elisp}.el #{url}")
+    system("curl -X GET #{url} > #{DOT_EMACS_ROOT}#{dir}#{elisp}.el ")
   end
 end
 
