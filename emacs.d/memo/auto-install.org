@@ -1,0 +1,4 @@
+* about
+初めにcloneした後にauto-installするものリスト
+
+* list
