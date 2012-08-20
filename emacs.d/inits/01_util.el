@@ -29,3 +29,10 @@
 
 ;; ファイルリストの表示
 (global-set-key (kbd "C-;") 'anything-for-files)
+
+
+;=======================================================================
+; auto-complete
+;=======================================================================
+(require 'auto-complete-config)
+(global-auto-complete-mode 1)

@@ -12,4 +12,5 @@
 ** anything
 *** M-x auto-install-batch [RET] anything [RET]
 
-
+** auto-complete
+*** M-x auto-install-batch [RET] auto-complete [TAB]
