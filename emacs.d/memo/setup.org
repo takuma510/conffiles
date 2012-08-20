@@ -1,0 +1,15 @@
+* about
+初めにcloneした後にsetupすることリスト。
+基本、上から順に。
+
+
+* install-elisp
+** auto-install, init-loader等の手動インストール
+** util/install-elisp.rb
+
+  
+* auto-install
+** anything
+*** M-x auto-install-batch [RET] anything [RET]
+
+

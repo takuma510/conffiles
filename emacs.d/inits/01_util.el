@@ -19,3 +19,13 @@
 
 ;; ediff関連のバッファを1つのフレームにまとめる
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
+
+
+;=======================================================================
+; anything
+;=======================================================================
+(require 'anything-config)
+(require 'anything-match-plugin)
+
+;; ファイルリストの表示
+(global-set-key (kbd "C-;") 'anything-for-files)
