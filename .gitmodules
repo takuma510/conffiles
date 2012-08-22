@@ -1,0 +1,3 @@
+[submodule "emacs.d/vender/init-loader"]
+	path = emacs.d/vender/init-loader
+	url = git://gist.github.com/1021706.git

@@ -7,8 +7,12 @@
 (add-to-list 'load-path "~/.emacs.d/manual-install")
 
 
+
 ;=======================================================================
 ; init-loader
 ;=======================================================================
+(add-to-list 'load-path "~/.emacs.d/vender/init-loader")
 (require 'init-loader)
-(init-loader-load "~/.emacs.d/inits") ; 設定ファイルがあるディレクトリを指定
+
+;; 設定ファイルがあるディレクトリを指定
+(init-loader-load "~/.emacs.d/inits")

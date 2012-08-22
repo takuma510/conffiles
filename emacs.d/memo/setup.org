@@ -4,7 +4,9 @@
 
 
 * install-elisp
-** auto-install, init-loader等の手動インストール
+** git submoduleでinit-loaderをいれる
+*** git submodule init
+** auto-installのインストール
 ** util/install-elisp.rb
 
   
