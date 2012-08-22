@@ -52,3 +52,22 @@
 
 ;; 対応する括弧を表示させる
 (show-paren-mode t)
+
+
+;=======================================================================
+; 初期化用自作関数 各環境毎の設定ファイルで呼ぶ
+;=======================================================================
+(defun my-start-gui-emacs ()
+  ;; start server for emacsclient
+  (require 'server)
+  (unless (server-running-p)
+    (server-start))
+
+  ;; "C-x C-c"でサーバをkill
+  (global-set-key (kbd "C-x C-c") 'server-edit)
+  ;; "M-x exit"でemacsを終了
+  (defalias 'exit 'save-buffers-kill-emacs)
+
+  ;; GUIでの色付け
+  (add-to-list 'default-frame-alist '(background-color . "black"))
+  (add-to-list 'default-frame-alist '(foreground-color . "white")))
