@@ -71,3 +71,12 @@
   ;; GUIでの色付け
   (add-to-list 'default-frame-alist '(background-color . "black"))
   (add-to-list 'default-frame-alist '(foreground-color . "white")))
+
+(defun my-start-cui-emacs ()
+  ;; ターミナルでマウスを有効にする
+  (xterm-mouse-mode t)
+  (global-set-key [mouse-4] '(lambda () (interactive) (scroll-down 5)))
+  (global-set-key [mouse-5] '(lambda () (interactive) (scroll-up 5)))
+
+  ;; CUIではdefault-frame-alistを使わないほうが良さげ
+  (set-background-color "black"))
