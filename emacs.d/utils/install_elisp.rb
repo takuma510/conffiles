@@ -11,6 +11,10 @@ ELISP_LIST = {
   'auto-install' => {
     dir: DEFAULT_DIR,
     url: 'http://www.emacswiki.org/emacs/download/auto-install.el'
+  },
+  'tabbar' => {
+    dir: DEFAULT_DIR,
+    url: 'http://www.emacswiki.org/emacs/download/tabbar.el'
   }
 }
 
@@ -24,10 +28,15 @@ def install(dir, url, command, elisp)
   end
 end
 
+def is_installed(elisp, dir)
+  file_path = DOT_EMACS_ROOT + dir + elisp + '.el'
+  File.exists?("#{file_path}")
+end
 
 ELISP_LIST.each do |elisp, propaty|
-  puts "install #{elisp}...to #{propaty[:dir]}"
+  next if is_installed(elisp, propaty[:dir])
 
+  puts "install #{elisp}...to #{propaty[:dir]}"
   if install(propaty[:dir], propaty[:url], download_command, elisp)
     puts "success!!"
   else
