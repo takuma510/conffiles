@@ -3,16 +3,16 @@
 基本、上から順に。
 
 
-* install-elisp
-** git submoduleでinit-loaderをいれる
-*** git submodule init
-** auto-installのインストール
-** util/install-elisp.rb
+** install-elisp
+*** git submoduleでinit-loaderをいれる
+**** git submodule init
+*** auto-installのインストール
+**** util/install-elisp.rb
 
-  
-* auto-install
-** anything
-*** M-x auto-install-batch [RET] anything [RET]
 
-** auto-complete
-*** M-x auto-install-batch [RET] auto-complete [TAB]
+** auto-install
+*** anything
+**** M-x auto-install-batch [RET] anything [RET]
+
+*** auto-complete
+**** M-x auto-install-batch [RET] auto-complete [TAB]
