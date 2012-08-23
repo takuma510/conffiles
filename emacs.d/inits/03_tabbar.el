@@ -1,5 +1,6 @@
 
-;;;; tab機能 (elscreen的な)
+;;;; バッファのtab機能
+
 
 (require 'tabbar)
 (tabbar-mode 1)
