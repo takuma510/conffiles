@@ -14,6 +14,7 @@
 (global-set-key (kbd "C-S-l") 'windmove-right)
 
 
+
 ;;; 全体
 
 ;; メニューバー、ツールバー、スクロールバーを消す, Emacs23以降
@@ -34,6 +35,7 @@
 (column-number-mode t)
 
 
+
 ;;; 強調
 
 ;; 現在行をハイライト
@@ -49,6 +51,7 @@
 
 ;; 対応する括弧を表示させる
 (show-paren-mode t)
+
 
 
 ;;; 初期化用自作関数 各環境毎の設定ファイルで呼ぶ
