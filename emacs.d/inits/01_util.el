@@ -1,10 +1,8 @@
-;;
-;; 便利機能の追加
-;;
-;;
-;=======================================================================
-; auto-install
-;=======================================================================
+
+;;;; 便利機能の追加
+
+;;; auto-install
+
 (require 'auto-install)
 
 ;; auto-installによってインストールされるEmacs Lispをロードパスに加える
@@ -21,9 +19,9 @@
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 
 
-;=======================================================================
-; anything
-;=======================================================================
+
+;;; anything
+
 (require 'anything-config)
 (require 'anything-match-plugin)
 
@@ -31,8 +29,8 @@
 (global-set-key (kbd "C-;") 'anything-for-files)
 
 
-;=======================================================================
-; auto-complete
-;=======================================================================
+
+;;; auto-complete
+
 (require 'auto-complete-config)
 (global-auto-complete-mode 1)

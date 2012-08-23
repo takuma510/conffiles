@@ -1,7 +1,6 @@
-;;
-;; tab機能 (elscreen的な)
-;;
-;;
+
+;;;; tab機能 (elscreen的な)
+
 (require 'tabbar)
 (tabbar-mode 1)
 

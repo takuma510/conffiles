@@ -1,6 +1,6 @@
-;;
-;;  org-mode
-;;
+
+;;;;  org-mode
+
 ;; Emacs23以降
 (if (>= emacs-major-version 23)
     (progn
