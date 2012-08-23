@@ -3,8 +3,14 @@
 
 ;;; バックアップファイルは作成しない
 
+;; バックアップファイル作成無効
 (setq backup-inhibited t)
+
+;; バックアップファイル*.~作成無効化
 (setq make-backup-files nil)
+
+;; バックアップファイル.#*無効化
+(setq auto-save-default nil)
 
 
 
