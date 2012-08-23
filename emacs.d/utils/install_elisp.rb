@@ -15,6 +15,10 @@ ELISP_LIST = {
   'tabbar' => {
     dir: DEFAULT_DIR,
     url: 'http://www.emacswiki.org/emacs/download/tabbar.el'
+  },
+  'auto-save-buffers' => {
+    dir: DEFAULT_DIR,
+    url: 'http://0xcc.net/misc/auto-save/auto-save-buffers.el'
   }
 }
 
