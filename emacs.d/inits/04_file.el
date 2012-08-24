@@ -34,6 +34,3 @@
 
 ;; 前と同じ行の幅にインデント
 (setq indent-line-function 'indent-relative-maybe)
-
-;; returnで改行とインデント(デフォルトはC-j)
-(global-set-key "\C-m" 'newline-and-indent)
