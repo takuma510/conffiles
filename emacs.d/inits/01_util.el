@@ -1,6 +1,7 @@
 
 ;;;; 便利機能の追加
 
+
 ;;; auto-install
 
 (require 'auto-install)

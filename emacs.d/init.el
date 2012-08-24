@@ -1,6 +1,7 @@
 
 ;;;; 初めに読み込まれるファイル
 
+
 ;;; load-pathの追加
 
 (add-to-list 'load-path "~/.emacs.d/manual-install")
