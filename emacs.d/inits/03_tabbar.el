@@ -47,7 +47,7 @@
 
 ;; タブに表示させるバッファの設定
 (defvar my-tabbar-displayed-buffers
-  '("*scratch*" "*Messages*" "*Backtrace*" "*Colors*" "*Faces*" "*vc-")
+  '("*scratch*" "*Backtrace*" "*Colors*" "*Faces*" "*vc-" "*Org Agenda*")
   "*Regexps matches buffer names always included tabs.")
 
 (defun my-tabbar-buffer-list ()
