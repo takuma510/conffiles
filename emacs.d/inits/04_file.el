@@ -35,3 +35,11 @@
 
 ;; 前と同じ行の幅にインデント
 (setq indent-line-function 'indent-relative-maybe)
+
+
+
+;;; others
+
+;; ファイルの先頭が #! で始まるファイルに実行権限をつける
+(add-hook 'after-save-hook
+          'executable-make-buffer-file-executable-if-script-p)
