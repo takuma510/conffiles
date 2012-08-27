@@ -11,3 +11,8 @@
 
 ;;; スタートアップ画面非表示
 (setq inhibit-startup-message t)
+
+
+
+;;; ジェネリックモード有効化
+(require 'generic-x)
