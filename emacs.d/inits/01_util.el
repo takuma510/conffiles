@@ -35,11 +35,3 @@
 
 (require 'auto-complete-config)
 (global-auto-complete-mode 1)
-
-
-
-;;; undo-tree
-
-(add-to-list 'load-path "~/.emacs.d/vendor/undo-tree/")
-(require 'undo-tree)
-(global-undo-tree-mode)
