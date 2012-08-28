@@ -1,0 +1,4 @@
+""" users generic .vimrc file
+
+syntax on
+colorscheme evening
