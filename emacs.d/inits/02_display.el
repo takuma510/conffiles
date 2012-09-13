@@ -15,6 +15,12 @@
 (setq frame-title-format (format "%%f - Emacs @%s" (system-name)))
 
 
+;; モードラインの改行コード
+(setq eol-mnemonic-unix "(EOL Unix)")
+(setq eol-mnemonic-dos  "(EOL Dos)")
+(setq eol-mnemonic-mac  "(EOL Mac)")
+
+
 
 ;;; ウィンドウ
 
@@ -117,3 +123,5 @@
 
   ;; CUIではdefault-frame-alistを使わないほうが良さげ
   (set-background-color "black"))
+
+
