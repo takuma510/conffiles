@@ -7,7 +7,7 @@
 *** git submoduleでinit-loaderをいれる
 **** git submodule init
 *** auto-installのインストール
-**** util/install-elisp.rb
+**** rake install_elisp
 
 
 ** auto-install
