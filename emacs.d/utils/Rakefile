@@ -17,6 +17,10 @@ ELISP_LIST = {
   'auto-save-buffers' => {
     dir: DEFAULT_DIR,
     url: 'http://0xcc.net/misc/auto-save/auto-save-buffers.el'
+  },
+  'markdown-mode' => {
+    dir: DEFAULT_DIR,
+    url: 'http://jblevins.org/git/markdown-mode.git/plain/markdown-mode.el'
   }
 }
 
