@@ -1,6 +1,8 @@
-* takuma510's conffiles
+takuma510' conffiles
+==========
 
-** Usage
+
+# Usage #
 ln -s /path/to/repo/emacs.d ~/.emacs.d
 ln -s /path/to/repo/zsh.d ~/.zsh.d
 cd ~/.zsh.d/; ./setup.sh
