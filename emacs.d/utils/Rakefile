@@ -26,6 +26,10 @@ ELISP_LIST = {
   'groovy-mode' => {
     dir: DEFAULT_DIR,
     url: 'https://launchpad.net/groovy-emacs-mode/trunk/current-release/+download/emacs-groovy-mode_2011-06-29.tgz'
+  },
+  'dired-single' => {
+    dir: DEFAULT_DIR,
+    url: 'http://www.emacswiki.org/emacs/download/dired-single.el'
   }
 }
 
@@ -44,7 +48,7 @@ end
 def install_elisp_with_text(dir, url, command, elisp)
   install_dir = File.expand_path "#{DOT_EMACS_ROOT}#{dir}"
   if command == :curl
-    sh "curl -X GET #{url} > #{install_dir}#{elisp}.el "
+    sh "curl -X GET #{url} > #{install_dir}/#{elisp}.el "
   end
 end
 
