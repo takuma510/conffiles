@@ -5,6 +5,7 @@
 
 DOT_EMACS_ROOT = '../'
 DEFAULT_DIR = 'manual-install/'
+TMP_DIR = DOT_EMACS_ROOT + 'tmp/'
 ELISP_LIST = {
    'auto-install' => {
     dir: DEFAULT_DIR,
@@ -21,16 +22,41 @@ ELISP_LIST = {
   'markdown-mode' => {
     dir: DEFAULT_DIR,
     url: 'http://jblevins.org/git/markdown-mode.git/plain/markdown-mode.el'
+  },
+  'groovy-mode' => {
+    dir: DEFAULT_DIR,
+    url: 'https://launchpad.net/groovy-emacs-mode/trunk/current-release/+download/emacs-groovy-mode_2011-06-29.tgz'
   }
 }
 
 download_command = :curl
 
-def install_elisp(dir, url, command, elisp)
-  install_dir = "#{DOT_EMACS_ROOT}#{dir}"
+def install_elisp_with_tgz(dir, url, command, elisp)
+  install_dir = File.expand_path "#{DOT_EMACS_ROOT}#{dir}"
+  FileUtils.cd(TMP_DIR) do
+    sh "wget --no-check-certificate #{url}"
+    sh "tar -zxvf #{File.basename url}"
+    sh "cp *.el #{install_dir}"
+    sh "rm *"
+  end
+end
 
+def install_elisp_with_text(dir, url, command, elisp)
+  install_dir = File.expand_path "#{DOT_EMACS_ROOT}#{dir}"
   if command == :curl
     sh "curl -X GET #{url} > #{install_dir}#{elisp}.el "
+  end
+end
+
+def install_elisp(dir, url, command, elisp)
+  ext = File.extname(url.to_s)
+  case ext
+  when '.tgz'
+    install_elisp_with_tgz(dir, url, command, elisp)
+  when '.el'
+    install_elisp_with_text(dir, url, command, elisp)
+  else
+    puts "unknown ext #{ext}"
   end
 end
 
