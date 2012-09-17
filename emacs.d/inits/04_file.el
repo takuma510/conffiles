@@ -38,6 +38,13 @@
 
 
 
+;;; ipa(ファイルに直接書き込まずメモをする)
+(require 'ipa)
+;; anythingインターフェース
+(require 'anything-ipa)
+
+
+
 ;;; others
 
 ;; ファイルの先頭が #! で始まるファイルに実行権限をつける

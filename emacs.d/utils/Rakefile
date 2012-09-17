@@ -30,7 +30,11 @@ ELISP_LIST = {
   'dired-single' => {
     dir: DEFAULT_DIR,
     url: 'http://www.emacswiki.org/emacs/download/dired-single.el'
-  }
+  },
+  'ipa' => {
+    dir: DEFAULT_DIR,
+    url: 'http://emacswiki.org/emacs/download/ipa.el'
+  },
 }
 
 download_command = :curl
