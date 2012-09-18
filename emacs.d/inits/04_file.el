@@ -45,8 +45,18 @@
 
 
 
+;;; session
+(require 'session)
+(add-hook 'after-init-hook 'session-initialize)
+
+
+
 ;;; others
 
 ;; ファイルの先頭が #! で始まるファイルに実行権限をつける
 (add-hook 'after-save-hook
           'executable-make-buffer-file-executable-if-script-p)
+
+
+;; 履歴を保存
+(savehist-mode t)

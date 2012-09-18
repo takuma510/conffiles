@@ -35,6 +35,10 @@ ELISP_LIST = {
     dir: DEFAULT_DIR,
     url: 'http://emacswiki.org/emacs/download/ipa.el'
   },
+  'session' => {
+    dir: DEFAULT_DIR,
+    url: 'http://sourceforge.net/projects/emacs-session/files/session/session-2.3a.tar.gz'
+  },
 }
 
 download_command = :curl
@@ -44,8 +48,13 @@ def install_elisp_with_tgz(dir, url, command, elisp)
   FileUtils.cd(TMP_DIR) do
     sh "wget --no-check-certificate #{url}"
     sh "tar -zxvf #{File.basename url}"
-    sh "cp *.el #{install_dir}"
-    sh "rm *"
+    Dir.glob("**/*").each do |f|
+      next if f == '.' || f == '..'
+
+      ext = File.extname(f)
+      sh "cp #{f} #{install_dir}" if ext == '.el'
+    end
+    sh "rm -r *"
   end
 end
 
@@ -60,6 +69,8 @@ def install_elisp(dir, url, command, elisp)
   ext = File.extname(url.to_s)
   case ext
   when '.tgz'
+    install_elisp_with_tgz(dir, url, command, elisp)
+  when '.gz'
     install_elisp_with_tgz(dir, url, command, elisp)
   when '.el'
     install_elisp_with_text(dir, url, command, elisp)
