@@ -39,6 +39,10 @@ ELISP_LIST = {
     dir: DEFAULT_DIR,
     url: 'http://sourceforge.net/projects/emacs-session/files/session/session-2.3a.tar.gz'
   },
+  'viewer' => {
+    dir: DEFAULT_DIR,
+    url: 'http://www.emacswiki.org/emacs/download/viewer.el'
+  },
 }
 
 download_command = :curl
