@@ -6,6 +6,8 @@
 ** install-elisp
 *** git submoduleでinit-loaderをいれる
 **** git submodule init
+*** rinariのsubmodle install
+**** cd vender/rinari; git submodle init; git submodle update
 *** auto-installのインストール
 **** rake install_elisp
 

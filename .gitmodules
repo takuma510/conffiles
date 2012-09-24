@@ -1,3 +1,6 @@
 [submodule "emacs.d/vender/init-loader"]
 	path = emacs.d/vender/init-loader
 	url = git://gist.github.com/1021706.git
+[submodule "emacs.d/vender/rinari"]
+	path = emacs.d/vender/rinari
+	url = git://github.com/eschulte/rinari.git
