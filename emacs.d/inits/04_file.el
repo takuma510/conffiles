@@ -46,12 +46,14 @@
 
 
 ;;; session
+
 (require 'session)
 (add-hook 'after-init-hook 'session-initialize)
 
 
 
 ;;; igrep
+
 (autoload 'igrep "igrep"
    "*Run `grep` PROGRAM to match REGEX in FILES..." t)
 (autoload 'igrep-find "igrep"
@@ -66,6 +68,13 @@
   "*Run `grep` on the files visited in buffers marked with '>'." t)
 (autoload 'igrep-insinuate "igrep"
   "Define `grep' aliases for the corresponding `igrep' commands." t)
+
+
+
+;;; grep-edit
+
+(require 'grep-edit)
+
 
 
 

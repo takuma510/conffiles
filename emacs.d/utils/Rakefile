@@ -47,6 +47,10 @@ ELISP_LIST = {
     dir: DEFAULT_DIR,
     url: 'http://www.emacswiki.org/cgi-bin/emacs/download/igrep.el'
   },
+  'grep-edit' => {
+    dir: DEFAULT_DIR,
+    url: 'http://emacswiki.org/emacs/download/grep-edit.el'
+  },
 }
 
 download_command = :curl
