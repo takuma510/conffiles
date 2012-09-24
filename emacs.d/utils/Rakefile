@@ -43,6 +43,10 @@ ELISP_LIST = {
     dir: DEFAULT_DIR,
     url: 'http://www.emacswiki.org/emacs/download/viewer.el'
   },
+  'igrep' => {
+    dir: DEFAULT_DIR,
+    url: 'http://www.emacswiki.org/cgi-bin/emacs/download/igrep.el'
+  },
 }
 
 download_command = :curl
