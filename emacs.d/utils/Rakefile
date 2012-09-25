@@ -6,8 +6,8 @@
 DOT_EMACS_ROOT = '../'
 DEFAULT_DIR = 'manual-install/'
 TMP_DIR = DOT_EMACS_ROOT + 'tmp/'
-ELISP_LIST = {
-   'auto-install' => {
+ELISP_FROM_WEB_LIST = {
+  'auto-install' => {
     dir: DEFAULT_DIR,
     url: 'http://www.emacswiki.org/emacs/download/auto-install.el'
   },
@@ -51,7 +51,21 @@ ELISP_LIST = {
     dir: DEFAULT_DIR,
     url: 'http://emacswiki.org/emacs/download/grep-edit.el'
   },
+  'ruby-block' => {
+    dir: DEFAULT_DIR,
+    url: 'http://www.emacswiki.org/emacs/download/ruby-block.el'
+  },
 }
+
+
+
+ELISP_FROM_LOCAL_LIST = {
+  'ruby-mode' => {
+    dir: DEFAULT_DIR,
+    command: "./install_ruby-mode.sh #{DOT_EMACS_ROOT}#{DEFAULT_DIR}"
+  },
+}
+
 
 download_command = :curl
 
@@ -99,7 +113,7 @@ end
 
 desc "3rd party elispのwebからのinstall"
 task :install_elisp do
-  ELISP_LIST.each do |elisp, propaty|
+  ELISP_FROM_WEB_LIST.each do |elisp, propaty|
     next if is_installed(elisp, propaty[:dir])
 
     puts "install #{elisp}...to #{propaty[:dir]}"
@@ -108,5 +122,12 @@ task :install_elisp do
     else
       puts "fail"
     end
+  end
+
+  ELISP_FROM_LOCAL_LIST.each do |elisp, propaty|
+    next if is_installed(elisp, propaty[:dir])
+
+    puts "install #{elisp}..."
+    sh propaty[:command]
   end
 end
