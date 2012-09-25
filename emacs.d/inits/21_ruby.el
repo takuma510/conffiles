@@ -57,9 +57,25 @@
 
 
 
+;;; rsense
+
+(setq rsense-home "~/.emacs.d/manual-install/rsense-0.3")
+(add-to-list 'load-path (concat rsense-home "/etc"))
+(require 'rsense)
+
+(defun my-rsense-hooks ()
+  ;; .や::を入力直後から補完開始
+  (add-to-list 'ac-sources 'ac-source-rsense-method)
+  (add-to-list 'ac-sources 'ac-source-rsense-constant)
+  ;; C-x .で補完出来るようキーを設定
+  (define-key ruby-mode-map (kbd "C-x .") 'ac-complete-rsense))
+
+
+
 ;;; ruby-mode-hook
 
 (defun my-ruby-mode-hooks ()
+  (my-rsense-hooks)
   (inf-ruby-keys)
   (ruby-electric-mode t)
   (ruby-block-mode t)

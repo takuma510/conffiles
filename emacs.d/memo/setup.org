@@ -10,6 +10,8 @@
 **** cd vender/rinari; git submodle init; git submodle update
 *** auto-installのインストール
 **** rake install_elisp
+*** rsenseのインストール
+**** cd utils; ./install_rsense.sh
 
 
 ** auto-install
