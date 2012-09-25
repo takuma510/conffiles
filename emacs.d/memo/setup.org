@@ -12,6 +12,8 @@
 **** rake install_elisp
 *** rsenseのインストール
 **** cd utils; ./install_rsense.sh
+*** yasnippetのインストール
+**** cd utils; ./install_yasnippet.sh
 
 
 ** auto-install

@@ -26,3 +26,18 @@
 (define-key ac-menu-map (kbd "C-n")   'ac-next)
 (define-key ac-menu-map (kbd "C-p")   'ac-previous)
 (define-key ac-menu-map (kbd "M-TAB") nil)
+
+
+
+;;; yasnippet
+
+;; yasnippet-0.6.1c
+(add-to-list 'load-path
+             "~/.emacs.d/manual-install/yasnippet-0.6.1c")
+(require 'yasnippet) ;; not yasnippet-bundle
+(yas/initialize)
+(yas/load-directory "~/.emacs.d/manual-install/yasnippet-0.6.1c/snippets")
+
+
+;; yasnippet-config
+(require 'yasnippet-config)
