@@ -4,12 +4,10 @@
 
 ;;; フレーム
 
-;; メニューバー、ツールバー、スクロールバーを消す, Emacs23以降
-(if (>= emacs-major-version 23)
-    (progn
-      (tool-bar-mode nil)
-      (scroll-bar-mode nil)
-      (menu-bar-mode nil)))
+;; メニューバー、ツールバー、スクロールバーを消す
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(menu-bar-mode -1)
 
 ;; フレームタイトルをファイルパスに
 (setq frame-title-format (format "%%f - Emacs @%s" (system-name)))
