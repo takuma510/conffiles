@@ -29,6 +29,7 @@
 ;;; ruby-block
 ;;; [description] endに対応する行のハイライト
 
+(require 'ruby-block)
 (setq ruby-block-highlight-toggle t)
 
 
