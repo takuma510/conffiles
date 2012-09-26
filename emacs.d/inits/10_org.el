@@ -17,7 +17,7 @@
 ;; テンプレート設定
 (setq org-remember-templates
       '(("Todo" ?t "** TODO %?\n   %i\n   %a\n   %t" nil "Inbox")
-	("Idea" ?i "** %?\n   %i\n   %a\n   %t" nil "New Ideas")))
+        ("Idea" ?i "** %?\n   %i\n   %a\n   %t" nil "New Ideas")))
 
 
 
@@ -26,7 +26,7 @@
 (setq org-use-fast-todo-selection t)
 (setq org-todo-keywords
       '((sequence "TODO(t)" "STARTED(s)" "WAITING(w)" "|" "DONE(x)" "CANCEL(c)")
-	(sequence "APPT(a)" "|" "DONE(x)" "CANCEL(c)")))
+        (sequence "APPT(a)" "|" "DONE(x)" "CANCEL(c)")))
 
 
 
