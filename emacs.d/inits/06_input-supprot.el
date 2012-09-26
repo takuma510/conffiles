@@ -34,10 +34,13 @@
 ;; yasnippet-0.6.1c
 (add-to-list 'load-path
              "~/.emacs.d/manual-install/yasnippet-0.6.1c")
-(require 'yasnippet) ;; not yasnippet-bundle
+(require 'yasnippet) ; not yasnippet-bundle
 (yas/initialize)
-(yas/load-directory "~/.emacs.d/manual-install/yasnippet-0.6.1c/snippets")
+(setq yas/root-directory '("~/.emacs.d/mysnippets"
+                           "~/.emacs.d/manual-install/yasnippet-0.6.1c/snippets"))
 
+;; Map `yas/load-directory' to every element
+(mapc 'yas/load-directory yas/root-directory)
 
 ;; yasnippet-config
 (require 'yasnippet-config)
