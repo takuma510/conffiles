@@ -2,10 +2,12 @@ takuma510's conffiles
 ==========
 
 
-## Usage ##
+## How to setup ##
 
-    ln -s /path/to/repo/emacs.d ~/.emacs.d
-    ln -s /path/to/repo/zsh.d ~/.zsh.d
+    cd ${HOME}
+    git clone https://github.com/takuma510/conffiles.git
+    ln -s conffiles/emacs.d ~/.emacs.d
+    ln -s conffiles/zsh.d ~/.zsh.d
     cd ~/.zsh.d/; ./setup.sh
-    ln -s /path/to/repo/vim.d ~/.vim.d
+    ln -s conffiles/vim.d ~/.vim.d
     cd ~/.vim.d/; ./setup.sh

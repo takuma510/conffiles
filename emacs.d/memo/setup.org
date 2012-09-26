@@ -3,22 +3,20 @@
 基本、上から順に。
 
 
-** install-elisp
-*** git submoduleでinit-loaderをいれる
-**** git submodule init
-*** rinariのsubmodle install
-**** cd vender/rinari; git submodle init; git submodle update
-*** auto-installのインストール
-**** rake install_elisp
-*** rsenseのインストール
-**** cd utils; ./install_rsense.sh
-*** yasnippetのインストール
-**** cd utils; ./install_yasnippet.sh
+** install git submodule(init-loader, rinari)
+*** cd utils; ./install_submodule.sh
 
-
-** auto-install
+** install by auto-install
 *** anything
 **** M-x auto-install-batch [RET] anything [RET]
 
 *** auto-complete
 **** M-x auto-install-batch [RET] auto-complete [TAB]
+
+
+** install other elisp
+*** rake install_elisp
+*** install rsense
+**** cd utils; ./install_rsense.sh
+*** install yasnippet
+**** cd utils; ./install_yasnippet.sh
