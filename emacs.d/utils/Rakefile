@@ -79,8 +79,8 @@ def install_elisp_with_tgz(dir, url, command, elisp)
 
       ext = File.extname(f)
       sh "cp #{f} #{install_dir}" if ext == '.el'
+      sh "rm #{f}"
     end
-    sh "rm -r *"
   end
 end
 
