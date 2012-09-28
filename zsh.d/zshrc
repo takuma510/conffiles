@@ -186,3 +186,7 @@ kterm*|xterm*)
         'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
     ;;
 esac
+
+# startup setting
+#
+[ -f ${HOME}/.zsh.d/startup.zshrc ] && source ${HOME}/.zsh.d/startup.zshrc
