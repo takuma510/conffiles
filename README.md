@@ -11,5 +11,5 @@ takuma510's conffiles
     cd ~/.zsh.d ; ./setup.sh
     ln -s conffiles/vim.d ~/.vim.d
     cd ~/.vim.d ; ./setup.sh
-    ln -s confiles/screen.d ~/.screen.d
-    cd ~/.screen.d ; ./setup.sh
+    ln -s confiles/tmux.d ~/.tmux.d
+    cd ~/.tmux.d ; ./setup.sh
