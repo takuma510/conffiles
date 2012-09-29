@@ -16,6 +16,10 @@ bind   r source-file ~/.tmux.conf
 set-option -g history-limit 10000
 
 
+# 256色ターミナル
+set-option -g default-terminal "screen-256color"
+
+
 # ウィンドウ設定
 source-file ~/.tmux.d/window.tmux
 

@@ -187,6 +187,11 @@ kterm*|xterm*)
     ;;
 esac
 
+# add PATH
+#
+[ -f ${HOME}/.zsh.d/path.zshrc ] && source ${HOME}/.zsh.d/path.zshrc
+
+
 # startup setting
 #
 [ -f ${HOME}/.zsh.d/startup.zshrc ] && source ${HOME}/.zsh.d/startup.zshrc

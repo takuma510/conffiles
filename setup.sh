@@ -17,4 +17,7 @@ ln -s confiles/tmux.d ~/.tmux.d
 cd ~/.tmux.d
 ./setup.sh
 
+echo "setup ~/bin"
+ln -s conffiles/bin ~/bin
+
 echo "done... \^_^/"
