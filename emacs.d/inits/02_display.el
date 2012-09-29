@@ -62,11 +62,12 @@
 (global-set-key (kbd "C-=") 'split-window-vertically)
 (global-set-key (kbd "C-|") 'split-window-horizontally)
 
-;; "C-S-hjkl"でウィンドウ移動
-(global-set-key (kbd "C-S-h") 'windmove-left)
-(global-set-key (kbd "C-S-j") 'windmove-down)
-(global-set-key (kbd "C-S-k") 'windmove-up)
-(global-set-key (kbd "C-S-l") 'windmove-right)
+;; "C-t-hjkl"でウィンドウ移動
+(global-unset-key "\C-t")
+(global-set-key (kbd "\C-th") 'windmove-left)
+(global-set-key (kbd "\C-tj") 'windmove-down)
+(global-set-key (kbd "\C-tk") 'windmove-up)
+(global-set-key (kbd "\C-tl") 'windmove-right)
 
 
 
