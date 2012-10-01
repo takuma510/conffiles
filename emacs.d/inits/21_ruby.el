@@ -2,6 +2,12 @@
 ;;;; ruby-mode
 
 
+;;; defaults
+
+(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
+
+
+
 ;;; rinari
 
 (add-to-list 'load-path "~/.emacs.d/vender/rinari")
