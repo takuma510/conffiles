@@ -15,3 +15,7 @@
           '(lambda ()
              (require 'groovy-electric)
              (groovy-electric-mode)))
+
+;;; activate auto-complete mode
+(setq ac-modes (append ac-modes '(groovy-mode)))
+(setq ac-modes (append ac-modes '(grails-mode)))
