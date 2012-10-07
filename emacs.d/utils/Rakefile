@@ -59,7 +59,12 @@ ELISP_FROM_WEB_LIST = {
     dir: DEFAULT_DIR,
     url: 'http://www.emacswiki.org/emacs/download/open-junk-file.el'
   },
+  'lispxmp' => {
+    dir: DEFAULT_DIR,
+    url: 'http://emacswiki.org/emacs/download/lispxmp.el'
+  },
 }
+
 
 
 
