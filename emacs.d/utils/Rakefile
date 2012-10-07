@@ -55,6 +55,10 @@ ELISP_FROM_WEB_LIST = {
     dir: DEFAULT_DIR,
     url: 'http://www.emacswiki.org/emacs/download/ruby-block.el'
   },
+  'open-junk-file' => {
+    dir: DEFAULT_DIR,
+    url: 'http://www.emacswiki.org/emacs/download/open-junk-file.el'
+  },
 }
 
 
