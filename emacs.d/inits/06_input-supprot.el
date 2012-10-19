@@ -44,3 +44,18 @@
 
 ;; yasnippet-config
 (require 'yasnippet-config)
+
+;; enable yasnippet
+(defun yas/advise-indent-function (function-symbol)
+  (eval `(defadvice ,function-symbol (around yas/try-expand-first activate)
+           ,(format
+             "Try to expand a snippet before point, then call `%s' as usual"
+             function-symbol)
+           (let ((yas/fallback-behavior nil))
+             (unless (and (interactive-p)
+                          (yas/expand))
+               ad-do-it)))))
+
+
+(yas/advise-indent-function 'c-indent-line-or-region)  ; on groovy-mode
+(yas/advise-indent-function 'ruby-indent-command)  ; on ruby-mode
