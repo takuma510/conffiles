@@ -87,6 +87,15 @@
 
 
 
+;;; resentf
+
+;; 最大履歴item数
+(setq recentf-max-saved-items 3000)
+
+(require 'recentf-ext)
+
+
+
 ;;; others
 
 ;; ファイルの先頭が #! で始まるファイルに実行権限をつける

@@ -67,6 +67,10 @@ ELISP_FROM_WEB_LIST = {
     dir: DEFAULT_DIR,
     url: 'http://mumble.net/~campbell/emacs/paredit.el'
   },
+  'recentf-ext' => {
+    dir: DEFAULT_DIR,
+    url: 'http://emacswiki.org/emacs/download/recentf-ext.el'
+  },
 }
 
 
