@@ -23,6 +23,7 @@
 (global-auto-complete-mode t)
 
 ;; key-bind setting
+(setq ac-use-menu-map t)
 (define-key ac-menu-map (kbd "C-n")   'ac-next)
 (define-key ac-menu-map (kbd "C-p")   'ac-previous)
 (define-key ac-menu-map (kbd "M-TAB") nil)
