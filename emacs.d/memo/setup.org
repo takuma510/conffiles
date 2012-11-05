@@ -20,3 +20,7 @@
 **** cd utils; ./install_rsense.sh
 *** install yasnippet
 **** cd utils; ./install_yasnippet.sh
+
+** install groovyserv
+*** brew install groovyserv (OSX)
+*** edit exec-path of groovyserv in 20_groovy.el
