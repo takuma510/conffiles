@@ -27,7 +27,7 @@
 (require 'flymake)
 
 (setq exec-path
-      (cons "l/usr/local/Cellar/groovyserv/0.10/bin" exec-path))  ; 環境依存 (-_-)
+      (cons "/usr/local/Cellar/groovyserv/0.10/bin" exec-path))  ; 環境依存 (-_-)
 
 ;; Invoke groovyclient for compile with syntax checking
 (defun flymake-groovy-init ()
