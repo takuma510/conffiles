@@ -193,6 +193,11 @@ esac
 [ -f ${HOME}/.zsh.d/path.zshrc ] && source ${HOME}/.zsh.d/path.zshrc
 
 
+# add PATH
+#
+[ -f ${HOME}/.zsh.d/alias.zshrc ] && source ${HOME}/.zsh.d/alias.zshrc
+
+
 # startup setting
 #
 [ -f ${HOME}/.zsh.d/startup.zshrc ] && source ${HOME}/.zsh.d/startup.zshrc
