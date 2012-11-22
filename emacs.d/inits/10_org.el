@@ -30,10 +30,22 @@
 
 
 
+;;; MobileOrg (iphone, android用クライアント)
+
+;; Dropboxの同期用ディレクトリ
+(setq org-mobile-directory "~/Dropbox/MobileOrg")
+
+;; MobileOrgで新規作成したファイルの保存先
+(setq org-mobile-inbox-for-pull
+      (expand-file-name "mobile.org" org-directory))
+
+
+
 ;;; 予定表
 
 ;; 予定表に組み込まれるorgファイルのリスト
-(setq org-agenda-files (list org-default-notes-file))
+(setq org-agenda-files
+      (list org-default-notes-file))
 
 ;; agenda閲覧
 (global-set-key (kbd "C-c a") 'org-agenda)
@@ -41,6 +53,7 @@
 
 
 ;;; 要らないkey-bindingを無効化
+
 (define-key org-mode-map [C-S-left]  nil)
 (define-key org-mode-map [C-S-right] nil)
 (define-key org-mode-map (kbd "C-,") nil)
