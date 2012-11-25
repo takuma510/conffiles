@@ -4,3 +4,6 @@
 [submodule "emacs.d/vender/rinari"]
 	path = emacs.d/vender/rinari
 	url = git://github.com/eschulte/rinari.git
+[submodule "emacs.d/vender/undo"]
+	path = emacs.d/vender/undo
+	url = http://www.dr-qubit.org/git/undo-tree.git
