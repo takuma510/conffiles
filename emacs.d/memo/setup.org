@@ -20,6 +20,9 @@
 **** cd utils; ./install_rsense.sh
 *** install yasnippet
 **** cd utils; ./install_yasnippet.sh
+*** install scala-mode
+**** cd utils; ./install_scala-mode.sh
+
 
 ** install groovyserv
 *** brew install groovyserv (OSX)
