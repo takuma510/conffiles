@@ -3,8 +3,10 @@
 基本、上から順に。
 
 
+* commands
 ** install git submodule(init-loader, rinari)
 *** cd utils; ./install_submodule.sh
+
 
 ** install by auto-install
 *** anything
@@ -22,6 +24,8 @@
 **** cd utils; ./install_yasnippet.sh
 *** install scala-mode
 **** cd utils; ./install_scala-mode.sh
+*** install ENSIME
+**** cd utils; ./install_ensime.sh
 
 
 ** install groovyserv
