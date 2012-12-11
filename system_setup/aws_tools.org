@@ -1,0 +1,14 @@
+
+* コマンドラインツール
+	OSXでのbrew installが前提
+** ec2
+*** command
+	 	brew install ec2-api-tools
+*** ENV
+		mine.zshrcのEC2欄
+** cloud-watch
+*** command
+	 	brew install cloud-watch
+** auto-scaling
+*** command
+		brew install auto-scaling
