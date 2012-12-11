@@ -5,6 +5,7 @@
 [ -f ${HOME}/.zsh.d/postgres.zshrc ] && source ${HOME}/.zsh.d/postgres.zshrc
 [ -f ${HOME}/.zsh.d/ruby.zshrc ] && source ${HOME}/.zsh.d/ruby.zshrc
 [ -f ${HOME}/.zsh.d/mine.zshrc ] && source ${HOME}/.zsh.d/mine.zshrc
+[ -f ${HOME}/.zsh.d/aws.zshrc ] && source ${HOME}/.zsh.d/aws.zshrc
 
 ## Environment variable configuration
 #

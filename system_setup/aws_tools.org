@@ -5,7 +5,9 @@
 *** command
     brew install ec2-api-tools
 *** ENV
-    mine.zshrcのEC2欄
+    アカウントのpk-*.pemとcert-*.pemを用意
+    ~/.ec2/*.pemに配置(シンボリックリンクで)
+    環境変数はaws.zshrcに記載
 ** cloud-watch
 *** command
     brew install cloud-watch
