@@ -2,18 +2,28 @@
 * コマンドラインツール
 	OSXでのbrew installが前提
 ** ec2
-*** command
+*** install command
     brew install ec2-api-tools
 *** ENV
     アカウントのpk-*.pemとcert-*.pemを用意
     ~/.ec2/*.pemに配置(シンボリックリンクで)
     環境変数はaws.zshrcに記載
 ** cloud-watch
-*** command
+*** install command
     brew install cloud-watch
 ** auto-scaling
-*** command
+*** install command
     brew install auto-scaling
 ** elb
-*** command
+*** install command
     brew install elb-tools
+** aws-cloudsearch
+*** about
+    The Amazon CloudSearch command line tools wrap the configuration
+    and document service APIs to provide a simple way to set up and manage your search domains.
+
+    ref.
+    home-> http://aws.amazon.com/developertools/cloudsearch/9054800585729911
+    doc-> http://docs.amazonwebservices.com/cloudsearch/latest/developerguide/SvcCLT.html
+*** install command
+    brew install aws-cloudsearch
