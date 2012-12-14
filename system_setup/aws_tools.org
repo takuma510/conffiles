@@ -2,8 +2,13 @@
 * コマンドラインツール
 	OSXでのbrew installが前提
 ** ec2
+*** about
+    ref.
+    userguide-> http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/Welcome.html
+    toolref-> http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference/Welcome.html
 *** install command
     brew install ec2-api-tools
+    brew isntall ec2-ami-tools
 *** ENV
     アカウントのpk-*.pemとcert-*.pemを用意
     ~/.ec2/*.pemに配置(シンボリックリンクで)
