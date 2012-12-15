@@ -32,3 +32,8 @@
     doc-> http://docs.amazonwebservices.com/cloudsearch/latest/developerguide/SvcCLT.html
 *** install command
     brew install aws-cloudsearch
+
+** s3cmd
+*** install command
+    brew install s3cmd
+    s3cmd --configure
