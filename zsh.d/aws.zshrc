@@ -91,6 +91,14 @@ function my-ec2-stop-instances(){
 }
 
 
+function my-ec2-modify-instance-attribute(){
+  echo "please input instance type"
+  read AWS_INSTANCE_TYPE
+  ec2-modify-instance-attribute --instance-type ${AWS_INSTANCE_TYPE} --region ${AWS_CURRENT_REGION} ${AWS_CURRENT_EC2_INSTANCE_ID}
+}
+
+
+
 
 ## aws-cloudsearch
 #
