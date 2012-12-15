@@ -79,6 +79,18 @@ function my-ec2-run-instances(){
 }
 
 
+function my-ec2-start-instances(){
+  ec2-start-instances --region ${AWS_CURRENT_REGION} ${AWS_CURRENT_EC2_INSTANCE_ID}
+  echo "START INSTANCE ${AWS_CURRENT_EC2_INSTANCE_ID} @ ${AWS_CURRENT_REGION}"
+}
+
+
+function my-ec2-stop-instances(){
+  ec2-stop-instances --region ${AWS_CURRENT_REGION} ${AWS_CURRENT_EC2_INSTANCE_ID}
+  echo "STOP INSTANCE ${AWS_CURRENT_EC2_INSTANCE_ID} @ ${AWS_CURRENT_REGION}"
+}
+
+
 
 ## aws-cloudsearch
 #
