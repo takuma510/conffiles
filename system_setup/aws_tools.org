@@ -36,4 +36,5 @@
 ** s3cmd
 *** install command
     brew install s3cmd
+    brew install gpg
     s3cmd --configure
