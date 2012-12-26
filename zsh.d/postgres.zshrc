@@ -1,6 +1,8 @@
 ## POSTGRES
 #
 
+# if you want to introduce a new cluster, use initdb ${POSTGRES_CLUSTER}
+
 # set postgres_cluster path
 export POSTGRES_CLUSTER=/usr/local/var/postgres
 
