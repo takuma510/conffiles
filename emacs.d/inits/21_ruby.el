@@ -79,6 +79,13 @@
 
 
 
+;;; style
+
+(setq ruby-deep-indent-paren-style nil)
+
+
+
+
 ;;; ruby-mode-hook
 
 (defun my-ruby-mode-hooks ()
