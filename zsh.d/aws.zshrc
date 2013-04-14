@@ -53,26 +53,29 @@ function my-ec2-describe-instances(){
 }
 
 
-AWS_DEFAULT_AMI=ami-eca719ed  # ubuntu 12.04LTS@ap-northeast-1, see at http://cloud-images.ubuntu.com/locator/ec2/
-AWS_DEFAULT_INSTANCE_TYPE=m1.small # 1.7 GiB Mem
+AWS_DEFAULT_AMI=ami-fe6ceeff # ubuntu 12.04LTS@ap-northeast-1, see at http://cloud-images.ubuntu.com/locator/ec2/
+AWS_REGION=ap-northeast-1
+AWS_DEFAULT_INSTANCE_TYPE=t1.micro # 613 MiB Mem
 AWS_DEFAULT_SECURITY_GROUP=quicklaunch-1 # only ssh port is allowed
 
 function my-ec2-run-instances(){
   AWS_AMI=${AWS_DEFAULT_AMI}
   AWS_INSTANCE_TYPE=${AWS_DEFAULT_INSTANCE_TYPE}
-  AWS_SECURITY_GROUP=$AWS_DEFAULT_SECURITY_GROUP}
+  AWS_SECURITY_GROUP=${AWS_DEFAULT_SECURITY_GROUP}
 
   echo "please input key-pair"
   read AWS_KEY_PAIR
 
   echo "please input num of instance"
-  read INSTANCE_NUM
+  read AWS_INSTANCE_NUM
 
   echo "try to run new instance, ok? [y/n]"
-  read answer
+  read ANSWER
 
-  if test 'y' = answer ; then
-    ec2-run-instances ${AWS_AMI} -g ${AWS_SECURITY_GROUP} -k ${AWS_KEY_PAIR} -n ${AWS_INSTANCE_NUM} -t ${AWS_INSTANCE_TYPE}
+  if test 'y' = ${ANSWER} ; then
+    ec2-run-instances ${AWS_AMI} -g ${AWS_SECURITY_GROUP} \
+      -k ${AWS_KEY_PAIR} -n ${AWS_INSTANCE_NUM} \
+      -t ${AWS_INSTANCE_TYPE} --region ${AWS_REGION}
   else
     echo "not to run"
   fi
