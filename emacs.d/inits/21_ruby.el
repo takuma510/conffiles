@@ -84,6 +84,14 @@
 (setq ruby-deep-indent-paren-style nil)
 
 
+;; アクセス修飾子のインデントを下げる
+(push "public"    ruby-block-mid-keywords)
+(push "protected" ruby-block-mid-keywords)
+(push "private"   ruby-block-mid-keywords)
+(setq ruby-block-mid-re (regexp-opt ruby-block-mid-keywords))
+(setq ruby-negative
+      (concat "^[ \t]*\\(\\(" ruby-block-mid-re "\\)\\>\\|"
+              ruby-block-end-re "\\|}\\|\\]\\)"))
 
 
 ;;; rbenv path
