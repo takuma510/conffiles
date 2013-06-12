@@ -96,9 +96,6 @@
 (show-paren-mode t)
 
 
-;; 行番号をwindowに表示
-(global-linum-mode t)
-
 
 ;;; 初期化用自作関数 各環境毎の設定ファイルで呼ぶ
 
