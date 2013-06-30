@@ -66,8 +66,11 @@
 
 ;;; rsense
 
-(setq rsense-home "~/.emacs.d/manual-install/rsense-0.3")
-(add-to-list 'load-path (concat rsense-home "/etc"))
+(setq rsense-home (expand-file-name "~/.emacs.d/manual-install/rsense-0.3"))
+(add-to-list
+ 'load-path
+ (concat rsense-home
+         (expand-file-name "~/emacs.d/manual-install/rsense-0.3")))
 (require 'rsense)
 
 (defun my-rsense-hooks ()
