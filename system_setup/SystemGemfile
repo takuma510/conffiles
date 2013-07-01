@@ -1,0 +1,17 @@
+source 'http://rubygems.org'
+
+# Chef
+gem 'berkshelf'
+gem 'chef'
+gem 'knife-solo'
+
+# OSX cli
+gem 'itunes-client'
+
+# IRC (Server, Client, Bot)
+gem 'hector'
+gem 'zircon'
+gem 'cinch'
+
+# Tools
+gem 'pry'

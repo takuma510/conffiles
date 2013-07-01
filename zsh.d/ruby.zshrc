@@ -8,6 +8,21 @@ eval "$(rbenv init - zsh)"
 
 
 
+## Gem
+#
+
+funtion install_system_gems() {
+  echo "install system gems"
+  cd ~/conffiles/system_setup
+  cp ./SystemGemfile ./Gemfile
+  bundle install
+}
+
+# bundle exec
+alias be="bundle exec"
+
+
+
 ## rails
 #
 
@@ -39,6 +54,3 @@ function cleanup_for_installing_rails() {
 
 # default ruby opt
 export RUBYOPT="-ropenssl"
-
-# bundle exec
-alias be="bundle exec"
