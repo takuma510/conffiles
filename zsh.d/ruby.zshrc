@@ -11,6 +11,11 @@ eval "$(rbenv init - zsh)"
 ## rails
 #
 
+function cp_railsgem(){
+  echo 'copy rails Gemfile'
+  cp ~/conffiles/system_setup/RailsGemfile ./Gemfile
+}
+
 function install_default_rails() {
   echo "install default rails at `pwd`"
   cp ~/conffiles/system_setup/RailsGemfile ./Gemfile
