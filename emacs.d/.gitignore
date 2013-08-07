@@ -3,3 +3,7 @@ auto-save-list/
 .session
 history
 ac-comphist.dat
+elpa/
+url/
+tramp
+.org-id-locations
