@@ -25,6 +25,9 @@
     ;; ここに使っているパッケージを書く。
     slim-mode
     android-mode
+    php-mode
+    php-extras
+    flymake-php
     ))
 
 (let ((not-installed (loop for x in installing-package-list
