@@ -8,9 +8,10 @@
 (require 'package)
 
 ;; add package-archives server
-(add-to-list 'package-archives '("melpa" .     "http://melpa.milkbox.net/packages/"))
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-
+(add-to-list 'package-archives
+             '("melpa" .     "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
 
@@ -23,6 +24,7 @@
   '(
     ;; ここに使っているパッケージを書く。
     slim-mode
+    android-mode
     ))
 
 (let ((not-installed (loop for x in installing-package-list

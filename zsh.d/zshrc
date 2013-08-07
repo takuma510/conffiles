@@ -7,6 +7,7 @@
 [ -f ${HOME}/.zsh.d/mine.zshrc ] && source ${HOME}/.zsh.d/mine.zshrc
 [ -f ${HOME}/.zsh.d/aws.zshrc ] && source ${HOME}/.zsh.d/aws.zshrc
 [ -f ${HOME}/.zsh.d/git.zshrc ] && source ${HOME}/.zsh.d/git.zshrc
+[ -f ${HOME}/.zsh.d/android.zshrc ] && source ${HOME}/.zsh.d/android.zshrc
 
 
 ## Environment variable configuration
