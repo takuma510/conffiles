@@ -6,7 +6,7 @@ exec ruby -S -x $0 "$@"
 require 'webrick'
 
 root   = File.expand_path '.'
-server = WEBrick::HTTPServer.new Port: 8000, DocumentRoot: root
+port   = Integer(ARGV[0]) rescue 8000
+server = WEBrick::HTTPServer.new Port: port, DocumentRoot: root
 server.start
 trap('INT'){ server.shutdown }
-
