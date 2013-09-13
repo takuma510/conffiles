@@ -70,7 +70,7 @@
 (add-to-list
  'load-path
  (concat rsense-home
-         (expand-file-name "~/emacs.d/manual-install/rsense-0.3")))
+         (expand-file-name "/etc")))
 (require 'rsense)
 
 (defun my-rsense-hooks ()
