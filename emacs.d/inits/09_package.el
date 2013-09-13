@@ -30,6 +30,7 @@
     flymake-php
     js2-mode
     tss
+    ess
     ))
 
 (let ((not-installed (loop for x in installing-package-list
