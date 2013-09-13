@@ -28,6 +28,7 @@
     php-mode
     php-extras
     flymake-php
+    js2-mode
     ))
 
 (let ((not-installed (loop for x in installing-package-list
