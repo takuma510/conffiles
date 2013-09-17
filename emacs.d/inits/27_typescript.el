@@ -14,9 +14,6 @@
 ;; ポイントしている要素の定義元へジャンプするキー
 (setq tss-jump-to-definition-key "C->")
 
-;; 本拡張を有効にしたいモードを追加/変更する場合
-(add-to-list 'tss-enable-modes 'hoge-mode)
-
 ;; 入力と同時にauto-complete.elの補完を開始したいキーを追加/変更する場合
 (add-to-list 'tss-ac-trigger-command-keys "=")
 
