@@ -50,6 +50,9 @@
 ;; agenda閲覧
 (global-set-key (kbd "C-c a") 'org-agenda)
 
+;; agenda閲覧前のwindow状態をそのまま使う
+;; ref (http://stackoverflow.com/questions/10635989/emacs-org-agenda-list-destroy-my-windows-splits)
+(setq org-agenda-window-setup 'current-window)
 
 
 ;;; 要らないkey-bindingを無効化
