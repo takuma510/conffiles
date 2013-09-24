@@ -59,7 +59,8 @@
 
 ;; 予定表に組み込まれるorgファイルのリスト
 (setq org-agenda-files
-      (list org-default-notes-file))
+      (list org-default-notes-file
+            org-gtd-directory))
 
 ;; agenda閲覧
 (global-set-key (kbd "C-c a") 'org-agenda)
