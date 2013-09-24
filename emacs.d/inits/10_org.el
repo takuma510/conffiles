@@ -4,20 +4,34 @@
 
 (require 'org)
 
-;;; org-remember
 
-(global-set-key (kbd "M-m") 'org-remember) ; キーバインド
-(org-remember-insinuate) ; 初期化
+
+;;; org-capture
+
+(require 'org-install)
+(require 'org-capture)
 
 ;; メモの格納場所
 (setq org-directory "~/docs/")
 (setq org-default-notes-file
       (expand-file-name "memo.org" org-directory))
 
-;; テンプレート設定
-(setq org-remember-templates
-      '(("Todo" ?t "** TODO %?\n   %i\n   %a\n   %t" nil "Inbox")
-        ("Idea" ?i "** %?\n   %i\n   %a\n   %t" nil "New Ideas")))
+;; テンプレート
+(setq org-gtd-directory (concat org-directory "gtd/"))
+(setq org-capture-templates
+      '(("t" "Todo" entry
+         (file+headline
+          (expand-file-name "action.org" org-gtd-directory)
+          "Inbox")
+         "** TODO %?\n %i\n %a\n %t")
+        ("i" "Idea" entry
+         (file+headline
+          (expand-file-name "inbox.org" org-gtd-directory)
+          "New Ideas")
+         "** %?\n %i\n %a\n %t")))
+
+;; キーバインド
+(global-set-key (kbd "C-c c") 'org-capture)
 
 
 
