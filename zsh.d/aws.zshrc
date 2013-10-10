@@ -109,3 +109,9 @@ function my-ec2-modify-instance-attribute(){
 AWS_CLOUDSEARCH_VERSION=1.0.0.1-2012.03.05
 
 export CS_HOME=/usr/local/Cellar/aws-cloudsearch/${AWS_CLOUDSEARCH_VERSION} # OSX only...
+
+
+
+## aws-cli
+#
+source ~/.zsh.d/utils/aws-cli/bin/aws_zsh_completer.sh
