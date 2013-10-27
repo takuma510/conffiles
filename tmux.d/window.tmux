@@ -38,3 +38,9 @@ bind -n S-left select-pane -L
 bind -n S-down select-pane -D
 bind -n S-up select-pane -U
 bind -n S-right select-pane -R
+
+
+# コピーモードのコピーバッファをOSXのクリップボードに
+# 事前にreattach-to-user-namespaceをインストールする事
+
+bind-key -t emacs-copy C-Enter copy-pipe "reattach-to-user-namespace pbcopy"

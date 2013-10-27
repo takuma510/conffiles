@@ -1,0 +1,9 @@
+
+* OSX Install
+** enable clipboard copying
+*** install reattach-to-user-namespace
+    $ brew install reattach-to-user-namespace
+*** bind copy-pipe with reattach-to-user-namespace pbcopy
+    $ vim .tmux.conf (already binded in this repo)
+*** ref
+    http://robots.thoughtbot.com/post/55885045171/tmux-copy-paste-on-os-x-a-better-future
