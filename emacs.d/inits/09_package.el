@@ -31,6 +31,7 @@
     js2-mode
     tss
     ess
+    magit
     ))
 
 (let ((not-installed (loop for x in installing-package-list
