@@ -79,3 +79,22 @@
 (define-key org-mode-map [S-down]  nil)
 (define-key org-mode-map [S-left]  nil)
 (define-key org-mode-map [S-right] nil)
+
+
+;;; work
+
+(global-set-key (kbd "C-t w") 'my-todays-work)
+(defun my-todays-work ()
+  (interactive)
+  (setq my-work-file "~/docs/work.org")
+  (find-file my-work-file)
+  (goto-char (point-max))
+  (insert "** ")
+  (my-insert-today))
+
+(defun today ()
+  (interactive)
+  (my-insert-today))
+
+(defun my-insert-today ()
+  (insert (format-time-string "%Y-%m-%d")))
