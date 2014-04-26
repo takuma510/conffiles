@@ -28,7 +28,12 @@
          (file+headline
           (expand-file-name "inbox.org" org-gtd-directory)
           "New Ideas")
-         "** %?\n %i\n %a\n %t")))
+         "** %?\n %i\n %a\n %t")
+        ("c" "Schedule" entry
+         (file+headline
+          (expand-file-name "ical.org" org-gtd-directory)
+          "Schedule")
+         "** TODO %?\n\t")))
 
 ;; キーバインド
 (global-set-key (kbd "C-c c") 'org-capture)
@@ -98,3 +103,29 @@
 
 (defun my-insert-today ()
   (insert (format-time-string "%Y-%m-%d")))
+
+
+;;; iCal
+
+(require 'org-icalendar)
+(defun my-org-export-icalendar ()
+  (interactive)
+  (org-export-icalendar
+   nil
+   (expand-file-name "ical.org" org-gtd-directory)))
+(global-set-key (kbd "C-c l") 'my-org-export-icalendar)
+
+;; iCal の説明文
+(setq org-icalendar-combined-description "OrgModeのスケジュール出力")
+
+;; カレンダーに適切なタイムゾーンを設定する（google 用には nil が必要）
+(setq org-icalendar-timezone "Asia/Tokyo")
+
+;; DONE になった TODO は出力対象から除外する
+(setq org-icalendar-include-todo t)
+
+;; （通常は，<>--<> で区間付き予定をつくる．非改行入力で日付がNoteに入らない）
+(setq org-icalendar-use-scheduled '(event-if-todo))
+
+;; DL 付きで終日予定にする：締め切り日（スタンプで時間を指定しないこと）
+(setq org-icalendar-use-deadline '(event-if-todo))
