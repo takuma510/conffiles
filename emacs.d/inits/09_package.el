@@ -32,6 +32,7 @@
     tss
     ess
     magit
+    haskell-mode
     ))
 
 (let ((not-installed (loop for x in installing-package-list
