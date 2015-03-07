@@ -17,8 +17,9 @@
 
 ;;; 自動保存
 
-(require 'auto-save-buffers)
-(run-with-idle-timer 1 t 'auto-save-buffers) ; アイドル1秒で保存
+(require 'auto-save-buffers-enhanced)
+(setq auto-save-buffers-enhanced-interval 1) ; 指定のアイドル秒で保存
+(auto-save-buffers-enhanced t)
 
 
 
@@ -36,10 +37,6 @@
 ;; 前と同じ行の幅にインデント
 (setq indent-line-function 'indent-relative-maybe)
 
-
-
-;;; ipa(ファイルに直接書き込まずメモをする)
-(require 'ipa)
 
 
 
@@ -66,13 +63,6 @@
   "*Run `grep` on the files visited in buffers marked with '>'." t)
 (autoload 'igrep-insinuate "igrep"
   "Define `grep' aliases for the corresponding `igrep' commands." t)
-
-
-
-;;; grep-edit
-
-(require 'grep-edit)
-
 
 
 

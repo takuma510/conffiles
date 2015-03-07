@@ -7,65 +7,9 @@ DOT_EMACS_ROOT = '../'
 DEFAULT_DIR = 'manual-install/'
 TMP_DIR = DOT_EMACS_ROOT + 'tmp/'
 ELISP_FROM_WEB_LIST = {
-  'tabbar' => {
-    dir: DEFAULT_DIR,
-    url: 'http://www.emacswiki.org/emacs/download/tabbar.el'
-  },
-  'auto-save-buffers' => {
-    dir: DEFAULT_DIR,
-    url: 'http://0xcc.net/misc/auto-save/auto-save-buffers.el'
-  },
-  'markdown-mode' => {
-    dir: DEFAULT_DIR,
-    url: 'http://jblevins.org/git/markdown-mode.git/plain/markdown-mode.el'
-  },
   'groovy-mode' => {
     dir: DEFAULT_DIR,
     url: 'https://launchpad.net/groovy-emacs-mode/trunk/current-release/+download/emacs-groovy-mode_2011-06-29.tgz'
-  },
-  'dired-single' => {
-    dir: DEFAULT_DIR,
-    url: 'http://www.emacswiki.org/emacs/download/dired-single.el'
-  },
-  'ipa' => {
-    dir: DEFAULT_DIR,
-    url: 'http://emacswiki.org/emacs/download/ipa.el'
-  },
-  'session' => {
-    dir: DEFAULT_DIR,
-    url: 'http://sourceforge.net/projects/emacs-session/files/session/session-2.3a.tar.gz'
-  },
-  'viewer' => {
-    dir: DEFAULT_DIR,
-    url: 'http://www.emacswiki.org/emacs/download/viewer.el'
-  },
-  'igrep' => {
-    dir: DEFAULT_DIR,
-    url: 'http://www.emacswiki.org/cgi-bin/emacs/download/igrep.el'
-  },
-  'grep-edit' => {
-    dir: DEFAULT_DIR,
-    url: 'http://emacswiki.org/emacs/download/grep-edit.el'
-  },
-  'ruby-block' => {
-    dir: DEFAULT_DIR,
-    url: 'http://www.emacswiki.org/emacs/download/ruby-block.el'
-  },
-  'open-junk-file' => {
-    dir: DEFAULT_DIR,
-    url: 'http://www.emacswiki.org/emacs/download/open-junk-file.el'
-  },
-  'lispxmp' => {
-    dir: DEFAULT_DIR,
-    url: 'http://emacswiki.org/emacs/download/lispxmp.el'
-  },
-  'paredit' => {
-    dir: DEFAULT_DIR,
-    url: 'http://mumble.net/~campbell/emacs/paredit.el'
-  },
-  'recentf-ext' => {
-    dir: DEFAULT_DIR,
-    url: 'http://emacswiki.org/emacs/download/recentf-ext.el'
   },
 }
 

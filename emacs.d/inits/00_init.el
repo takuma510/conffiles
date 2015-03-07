@@ -32,6 +32,20 @@
     actionscript-mode
     helm
     auto-complete
+    tabbar
+    viewer
+    auto-save-buffers-enhanced
+    session
+    lispxmp
+    dired-single
+    markdown-mode
+    yasnippet
+    ruby-electric
+    ruby-block
+    paredit
+    igrep
+    open-junk-file
+    recentf-ext
     ))
 
 (let ((not-installed (loop for x in installing-package-list
