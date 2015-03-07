@@ -18,14 +18,12 @@
 
 
 
-;;; anything
+;;; helm
 
-(require 'anything-config)
-(require 'anything-match-plugin)
+(require 'helm)
 
 ;; ファイルリストの表示
-(global-set-key (kbd "C-;") 'anything-for-files)
-
+(global-set-key (kbd "C-;") 'helm-recentf)
 
 
 ;;; undo-tree

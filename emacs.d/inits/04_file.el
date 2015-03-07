@@ -40,8 +40,6 @@
 
 ;;; ipa(ファイルに直接書き込まずメモをする)
 (require 'ipa)
-;; anythingインターフェース
-(require 'anything-ipa)
 
 
 
