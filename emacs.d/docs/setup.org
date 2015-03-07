@@ -8,11 +8,6 @@
 *** cd utils; ./install_submodule.sh
 
 
-** install by auto-install
-*** auto-complete
-**** M-x auto-install-batch [RET] auto-complete [TAB]
-
-
 ** install other elisp
 *** rake install_elisp
 *** install rsense

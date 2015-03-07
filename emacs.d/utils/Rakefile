@@ -7,10 +7,6 @@ DOT_EMACS_ROOT = '../'
 DEFAULT_DIR = 'manual-install/'
 TMP_DIR = DOT_EMACS_ROOT + 'tmp/'
 ELISP_FROM_WEB_LIST = {
-  'auto-install' => {
-    dir: DEFAULT_DIR,
-    url: 'http://www.emacswiki.org/emacs/download/auto-install.el'
-  },
   'tabbar' => {
     dir: DEFAULT_DIR,
     url: 'http://www.emacswiki.org/emacs/download/tabbar.el'
