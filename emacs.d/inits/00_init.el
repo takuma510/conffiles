@@ -1,18 +1,43 @@
 
-;;;; ファイル分割するほどではない設定群
+;;;; パッケージインストール
 
+;;; package.el
 
-;;; 文字コード
+;; Usage
+;; M-x package-list-packages -> i(check install pkg), x(exec install)
+(require 'package)
 
-(set-language-environment 'Japanese)
-(prefer-coding-system 'utf-8)
+;; add package-archives server
+(add-to-list 'package-archives
+             '("melpa" .     "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
 
+;; install pkg automatically (ref. http://qiita.com/catatsuy/items/5f1cd86e2522fd3384a0)
+(require 'cl)
+(defvar installing-package-list
+  '(
+    ;; ここに使っているパッケージを書く。
+    slim-mode
+    android-mode
+    php-mode
+    php-extras
+    flymake-php
+    js2-mode
+    tss
+    ess
+    magit
+    haskell-mode
+    actionscript-mode
+    helm
+    auto-complete
+    ))
 
-
-;;; スタートアップ画面非表示
-(setq inhibit-startup-message t)
-
-
-
-;;; ジェネリックモード有効化
-(require 'generic-x)
+(let ((not-installed (loop for x in installing-package-list
+                            when (not (package-installed-p x))
+                            collect x)))
+  (when not-installed
+    (package-refresh-contents)
+    (dolist (pkg not-installed)
+        (package-install pkg))))
