@@ -34,6 +34,7 @@
     magit
     haskell-mode
     actionscript-mode
+    helm
     ))
 
 (let ((not-installed (loop for x in installing-package-list
