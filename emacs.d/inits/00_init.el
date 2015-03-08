@@ -23,7 +23,11 @@
     android-mode
     php-mode
     php-extras
+    flymake
     flymake-php
+    flymake-cursor
+    flymake-easy
+    flymake-python-pyflakes
     js2-mode
     tss
     ess
@@ -46,6 +50,8 @@
     igrep
     open-junk-file
     recentf-ext
+    py-autopep8
+    elpy
     ))
 
 (let ((not-installed (loop for x in installing-package-list
