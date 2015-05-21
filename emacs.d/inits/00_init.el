@@ -52,6 +52,7 @@
     recentf-ext
     py-autopep8
     elpy
+    scala-mode2
     ))
 
 (let ((not-installed (loop for x in installing-package-list
