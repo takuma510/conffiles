@@ -53,6 +53,7 @@
     py-autopep8
     elpy
     scala-mode2
+    ensime
     ))
 
 (let ((not-installed (loop for x in installing-package-list
