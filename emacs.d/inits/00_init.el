@@ -45,6 +45,7 @@
     dired-single
     markdown-mode
     yasnippet
+    rbenv
     inf-ruby
     ruby-electric
     ruby-block

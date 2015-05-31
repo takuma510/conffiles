@@ -7,11 +7,26 @@
 (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
 
 
+;;; rbenv
+
+(require 'rbenv)
+(global-rbenv-mode)
+(setq rbenv-installation-dir "/usr/local/var/rbenv")
+
+(setenv "PATH" (concat (getenv "HOME") "/.rbenv/shims:"
+                       (getenv "HOME") "/.rbenv/bin:"
+                       (getenv "PATH")))
+
+(setq exec-path (cons
+                 (concat (getenv "HOME") "/.rbenv/shims")
+                 (cons (concat (getenv "HOME") "/.rbenv/bin") exec-path)))
+
+
+
 
 ;;; ruby-electric
 
 (require 'ruby-electric)
-
 
 
 ;;; inf-ruby
@@ -25,7 +40,6 @@
 (setq inf-ruby-default-implementation "pry")
 (setq inf-ruby-eval-binding "Pry.toplevel_binding")
 (add-hook 'inf-ruby-mode-hook 'ansi-color-for-comint-mode-on)
-
 
 
 ;;; ruby-block
@@ -79,15 +93,6 @@
               ruby-block-end-re "\\|}\\|\\]\\)"))
 
 
-;;; rbenv path
-
-(setenv "PATH" (concat (getenv "HOME") "/.rbenv/shims:"
-                       (getenv "HOME") "/.rbenv/bin:"
-                       (getenv "PATH")))
-
-(setq exec-path (cons
-                 (concat (getenv "HOME") "/.rbenv/shims")
-                 (cons (concat (getenv "HOME") "/.rbenv/bin") exec-path)))
 
 
 ;;; ruby-mode-hook
