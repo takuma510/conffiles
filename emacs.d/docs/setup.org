@@ -10,8 +10,6 @@
 
 ** install other elisp
 *** rake install_elisp
-*** install rsense
-**** cd utils; ./install_rsense.sh
 *** install yasnippet
 **** cd utils; ./install_yasnippet.sh
 *** install scala-mode
