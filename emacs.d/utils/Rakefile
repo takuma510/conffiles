@@ -13,17 +13,6 @@ ELISP_FROM_WEB_LIST = {
   },
 }
 
-
-
-
-ELISP_FROM_LOCAL_LIST = {
-  'ruby-mode' => {
-    dir: DEFAULT_DIR,
-    command: "./install_ruby-mode.sh #{DOT_EMACS_ROOT}#{DEFAULT_DIR}"
-  },
-}
-
-
 download_command = :curl
 
 def install_elisp_with_tgz(dir, url, command, elisp)
@@ -79,12 +68,5 @@ task :install_elisp do
     else
       puts "fail"
     end
-  end
-
-  ELISP_FROM_LOCAL_LIST.each do |elisp, propaty|
-    next if is_installed(elisp, propaty[:dir])
-
-    puts "install #{elisp}..."
-    sh propaty[:command]
   end
 end
