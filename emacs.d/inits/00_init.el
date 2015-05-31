@@ -35,6 +35,7 @@
     haskell-mode
     actionscript-mode
     helm
+    popup
     auto-complete
     tabbar
     viewer
