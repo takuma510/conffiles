@@ -45,6 +45,7 @@
     dired-single
     markdown-mode
     yasnippet
+    inf-ruby
     ruby-electric
     ruby-block
     paredit

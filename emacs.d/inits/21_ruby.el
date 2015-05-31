@@ -8,32 +8,27 @@
 
 
 
-;;; rinari
-
-(add-to-list 'load-path "~/.emacs.d/vender/rinari")
-(require 'rinari)
-
-
-
 ;;; ruby-electric
-;;; [description] 括弧などを自動挿入
 
 (require 'ruby-electric)
 
 
 
 ;;; inf-ruby
-;;; [description] emacsからirb
 
-(autoload 'run-ruby "inf-ruby"
-  "Run an inferior Ruby process")
-(autoload 'inf-ruby-keys "inf-ruby"
-  "Set local key defs for inf-ruby in ruby-mode")
+(require 'inf-ruby)
+
+(autoload 'inf-ruby "inf-ruby" "Run an inferior Ruby process" t)
+(add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
+
+;; use pry insted of irb
+(setq inf-ruby-default-implementation "pry")
+(setq inf-ruby-eval-binding "Pry.toplevel_binding")
+(add-hook 'inf-ruby-mode-hook 'ansi-color-for-comint-mode-on)
 
 
 
 ;;; ruby-block
-;;; [description] endに対応する行のハイライト
 
 (require 'ruby-block)
 (setq ruby-block-highlight-toggle t)
@@ -91,7 +86,6 @@
 ;;; ruby-mode-hook
 
 (defun my-ruby-mode-hooks ()
-  (inf-ruby-keys)
   (ruby-electric-mode t)
   (ruby-block-mode t)
   (if (and (not (null buffer-file-name)) (file-writable-p buffer-file-name))
