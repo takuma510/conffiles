@@ -10,12 +10,6 @@
 
 ** install other elisp
 *** rake install_elisp
-*** install yasnippet
-**** cd utils; ./install_yasnippet.sh
-*** install scala-mode
-**** cd utils; ./install_scala-mode.sh
-*** install ENSIME
-**** cd utils; ./install_ensime.sh
 
 
 ** install groovyserv
