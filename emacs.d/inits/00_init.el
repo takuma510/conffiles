@@ -48,6 +48,7 @@
     inf-ruby
     ruby-electric
     ruby-block
+    robe
     paredit
     igrep
     open-junk-file

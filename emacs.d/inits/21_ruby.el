@@ -35,6 +35,13 @@
 
 
 
+;;; robe
+
+(require 'robe)
+(add-hook 'ruby-mode-hook 'robe-mode)
+
+
+
 ;;; flymake
 
 (require 'flymake)
