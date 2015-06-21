@@ -17,6 +17,7 @@ compinit
 [ -f ${HOME}/.zsh.d/android.zshrc ] && source ${HOME}/.zsh.d/android.zshrc
 [ -f ${HOME}/.zsh.d/path.zshrc ] && source ${HOME}/.zsh.d/path.zshrc
 [ -f ${HOME}/.zsh.d/alias.zshrc ] && source ${HOME}/.zsh.d/alias.zshrc
+[ -f ${HOME}/.zsh.d/docker.zshrc ] && source ${HOME}/.zsh.d/docker.zshrc
 
 ## Environment variable configuration
 #
