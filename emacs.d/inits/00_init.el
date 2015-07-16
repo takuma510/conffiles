@@ -58,6 +58,9 @@
     elpy
     scala-mode2
     ensime
+    go-mode
+    go-autocomplete
+    go-eldoc
     ))
 
 (let ((not-installed (loop for x in installing-package-list
