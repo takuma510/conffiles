@@ -12,7 +12,6 @@ compinit
 [ -f ${HOME}/.zsh.d/ruby.zshrc ] && source ${HOME}/.zsh.d/ruby.zshrc
 [ -f ${HOME}/.zsh.d/jvm.zshrc ] && source ${HOME}/.zsh.d/jvm.zshrc
 [ -f ${HOME}/.zsh.d/mine.zshrc ] && source ${HOME}/.zsh.d/mine.zshrc
-[ -f ${HOME}/.zsh.d/aws.zshrc ] && source ${HOME}/.zsh.d/aws.zshrc
 [ -f ${HOME}/.zsh.d/git.zshrc ] && source ${HOME}/.zsh.d/git.zshrc
 [ -f ${HOME}/.zsh.d/android.zshrc ] && source ${HOME}/.zsh.d/android.zshrc
 [ -f ${HOME}/.zsh.d/path.zshrc ] && source ${HOME}/.zsh.d/path.zshrc
