@@ -1,5 +1,0 @@
-escape ^q^q
-hardstatus on
-hardstatus alwayslastline "screen | %w | %u %= %m/%d %D %c"
-
-shell /bin/zsh
