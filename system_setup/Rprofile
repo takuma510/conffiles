@@ -1,2 +1,0 @@
-## CRAN ミラーを指定
-options(repos="http://cran.md.tsukuba.ac.jp");
