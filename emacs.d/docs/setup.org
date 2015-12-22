@@ -8,10 +8,6 @@
 *** cd utils; ./install_submodule.sh
 
 
-** install other elisp
-*** rake install_elisp
-
-
 ** install groovyserv
 *** brew install groovyserv (OSX)
 *** edit exec-path of groovyserv in 20_groovy.el
