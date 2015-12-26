@@ -39,5 +39,10 @@ alias gb="git branch -a"
 alias be="bundle exec"
 
 
+#
+# Editor
+#
+alias emacs=ec
+
 # For ssh login with tmux
 alias ssh='TERM=screen ssh'

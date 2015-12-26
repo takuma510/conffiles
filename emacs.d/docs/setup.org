@@ -1,11 +1,11 @@
-* about
-初めにcloneした後にsetupすることリスト。
-基本、上から順に。
-
-
 * commands
-** install git submodule(init-loader, rinari)
+** emacsclient
+   ln -s /Applications/Emacs.app/Contents/MacOS/bin/emacsclient /usr/local/bin
+
+
+** install git submodule
 *** cd utils; ./install_submodule.sh
+
 
 
 ** install groovyserv
