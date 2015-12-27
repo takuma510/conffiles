@@ -8,4 +8,4 @@
 (defun open-atom ()
   (interactive)
   (call-process
-   "atom" nil t nil buffer-file-name))
+   "atom" nil nil nil buffer-file-name))
