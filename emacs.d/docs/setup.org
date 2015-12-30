@@ -3,11 +3,6 @@
    ln -s /Applications/Emacs.app/Contents/MacOS/bin/emacsclient /usr/local/bin
 
 
-** install git submodule
-*** cd utils; ./install_submodule.sh
-
-
-
 ** install groovyserv
 *** brew install groovyserv (OSX)
 *** edit exec-path of groovyserv in 20_groovy.el
