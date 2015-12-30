@@ -4,6 +4,3 @@
 [submodule "emacs.d/vender/undo"]
 	path = emacs.d/vender/undo
 	url = http://www.dr-qubit.org/git/undo-tree.git
-[submodule "zsh.d/utils/aws-cli"]
-	path = zsh.d/utils/aws-cli
-	url = https://github.com/aws/aws-cli.git
