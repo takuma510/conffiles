@@ -13,7 +13,7 @@
 
 ;;; undo-tree
 
-(add-to-list 'load-path "~/.emacs.d/vender/undo")
+
 (require 'undo-tree)
 (global-undo-tree-mode)
 

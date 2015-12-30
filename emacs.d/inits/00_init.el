@@ -61,6 +61,7 @@
     go-mode
     go-autocomplete
     go-eldoc
+    undo-tree
     ))
 
 (let ((not-installed (loop for x in installing-package-list
