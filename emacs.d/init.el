@@ -73,6 +73,7 @@
     elixir-yasnippets
     flymake-elixir
     alchemist
+    flycheck
     ))
 
 (let ((not-installed (loop for x in installing-package-list
