@@ -69,6 +69,10 @@
     go-eldoc
     undo-tree
     init-loader
+    elixir-mode
+    elixir-yasnippets
+    flymake-elixir
+    alchemist
     ))
 
 (let ((not-installed (loop for x in installing-package-list
