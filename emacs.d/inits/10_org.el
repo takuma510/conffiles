@@ -75,6 +75,10 @@
 (setq org-agenda-window-setup 'current-window)
 
 
+;;; speed-commands
+(setq org-use-speed-commands t)
+
+
 ;;; 要らないkey-bindingを無効化
 
 (define-key org-mode-map [C-S-left]  nil)
