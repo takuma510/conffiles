@@ -41,6 +41,7 @@
     haskell-mode
     actionscript-mode
     helm
+    helm-git-grep
     popup
     auto-complete
     tabbar
