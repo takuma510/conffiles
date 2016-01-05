@@ -42,6 +42,7 @@
     actionscript-mode
     helm
     helm-git-grep
+    helm-gtags
     popup
     auto-complete
     tabbar
