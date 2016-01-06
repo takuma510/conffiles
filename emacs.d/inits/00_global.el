@@ -17,6 +17,12 @@
 
 
 
+;;; kbd
+
+(define-key global-map (kbd "C-c j") 'goto-line)
+
+
+
 ;;; 文字コード
 
 (set-language-environment 'Japanese)
