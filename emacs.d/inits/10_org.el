@@ -35,8 +35,9 @@
           "Schedule")
          "** TODO %?\n\t")))
 
-;; キーバインド
-(global-set-key (kbd "C-c c") 'org-capture)
+;; kbd
+(define-key global-map (kbd "C-c c") 'org-capture)
+(define-key global-map (kbd "C-c s") 'org-insert-subheading)
 
 
 
