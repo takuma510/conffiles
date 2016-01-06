@@ -1,2 +1,1 @@
-inherit_from:
-  - https://github.com/bbatsov/rubocop/blob/master/config/default.yml
+# This file overrides https://github.com/bbatsov/rubocop/blob/master/config/default.yml
