@@ -62,12 +62,11 @@
 (global-set-key (kbd "C-=") 'split-window-vertically)
 (global-set-key (kbd "C-|") 'split-window-horizontally)
 
-;; "C-t-hjkl"でウィンドウ移動
-(global-unset-key "\C-t")
-(global-set-key (kbd "\C-th") 'windmove-left)
-(global-set-key (kbd "\C-tj") 'windmove-down)
-(global-set-key (kbd "\C-tk") 'windmove-up)
-(global-set-key (kbd "\C-tl") 'windmove-right)
+;; windmove with "C-c-hjkl"
+(global-set-key (kbd "C-c h") 'windmove-left)
+(global-set-key (kbd "C-c j") 'windmove-down)
+(global-set-key (kbd "C-c k") 'windmove-up)
+(global-set-key (kbd "C-c l") 'windmove-right)
 
 
 
@@ -128,5 +127,10 @@
 
 (elscreen-start)
 
+;; kbd
+(global-set-key (kbd "C-t n") 'elscreen-next)
+(global-set-key (kbd "C-t p") 'elscreen-previous)
+
+;; elscreen-persist
 (require 'elscreen-persist)
 (elscreen-persist-mode 1)
