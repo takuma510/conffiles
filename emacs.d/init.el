@@ -77,6 +77,7 @@
     flycheck
     dayone
     elscreen
+    elscreen-persist
     ))
 
 (let ((not-installed (loop for x in installing-package-list

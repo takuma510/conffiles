@@ -125,4 +125,8 @@
 
 
 ;;; Elscreen
+
 (elscreen-start)
+
+(require 'elscreen-persist)
+(elscreen-persist-mode 1)
