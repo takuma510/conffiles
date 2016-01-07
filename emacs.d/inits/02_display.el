@@ -125,11 +125,11 @@
 
 ;;; Elscreen
 
-(elscreen-start)
-
 ;; kbd
-(global-set-key (kbd "C-t n") 'elscreen-next)
-(global-set-key (kbd "C-t p") 'elscreen-previous)
+(global-unset-key "\C-t")
+(setq elscreen-prefix-key (kbd "C-t"))
+
+(elscreen-start)
 
 ;; elscreen-persist
 (require 'elscreen-persist)
