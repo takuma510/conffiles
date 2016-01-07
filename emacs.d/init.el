@@ -45,7 +45,6 @@
     helm-gtags
     popup
     auto-complete
-    tabbar
     viewer
     auto-save-buffers-enhanced
     session
@@ -77,6 +76,7 @@
     alchemist
     flycheck
     dayone
+    elscreen
     ))
 
 (let ((not-installed (loop for x in installing-package-list

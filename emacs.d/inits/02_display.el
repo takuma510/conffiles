@@ -124,3 +124,5 @@
   (set-background-color "black"))
 
 
+;;; Elscreen
+(elscreen-start)
