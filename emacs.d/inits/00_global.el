@@ -43,6 +43,18 @@
 
 
 
+;;; Elscreen
+
+;; kbd
+(setq elscreen-prefix-key (kbd "C-t"))
+(elscreen-start)
+
+;; elscreen-persist
+(require 'elscreen-persist)
+(elscreen-persist-mode 1)
+
+
+
 ;;; PATH from $SHELL
 
 (defun set-exec-path-from-shell-PATH ()

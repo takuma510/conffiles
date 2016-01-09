@@ -121,15 +121,3 @@
 
   ;; CUIではdefault-frame-alistを使わないほうが良さげ
   (set-background-color "black"))
-
-
-;;; Elscreen
-
-;; kbd
-(setq elscreen-prefix-key (kbd "C-t"))
-
-(elscreen-start)
-
-;; elscreen-persist
-(require 'elscreen-persist)
-(elscreen-persist-mode 1)
