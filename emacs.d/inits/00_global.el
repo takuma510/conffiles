@@ -19,6 +19,7 @@
 
 ;;; kbd
 
+(global-unset-key "\C-t")
 (define-key global-map (kbd "C-c j") 'goto-line)
 
 

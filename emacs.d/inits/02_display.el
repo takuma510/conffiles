@@ -126,7 +126,6 @@
 ;;; Elscreen
 
 ;; kbd
-(global-unset-key "\C-t")
 (setq elscreen-prefix-key (kbd "C-t"))
 
 (elscreen-start)
