@@ -78,6 +78,7 @@
     dayone
     elscreen
     elscreen-persist
+    w3m
     ))
 
 (let ((not-installed (loop for x in installing-package-list
