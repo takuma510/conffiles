@@ -1,9 +1,14 @@
 auto-save-list/
 *.elc
+*~
 .session
 history
 ac-comphist.dat
 elpa/
 url/
+eshell/
 tramp
 .org-id-locations
+elscreen
+recentf
+bookmarks
