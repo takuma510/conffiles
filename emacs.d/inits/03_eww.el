@@ -66,4 +66,17 @@
             (defvar eww-hl-search-word nil)))
 
 
+;; kbd
+(define-key eww-mode-map "h" 'backward-char)
+(define-key eww-mode-map "j" 'next-line)
+(define-key eww-mode-map "k" 'previous-line)
+(define-key eww-mode-map "l" 'forward-char)
+(define-key eww-mode-map "J" 'View-scroll-line-forward)
+(define-key eww-mode-map "K" 'View-scroll-line-backward)
+(define-key eww-mode-map "[" 'eww-back-url)
+(define-key eww-mode-map "]" 'eww-forward-url)
+(define-key eww-mode-map "{" 'eww-previous-url)
+(define-key eww-mode-map "}" 'eww-next-url)
+
+
 ;;; 03_eww.el ends here
