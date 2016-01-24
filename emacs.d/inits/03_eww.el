@@ -48,12 +48,6 @@
 (add-hook 'eww-mode-hook 'eww-mode-hook--disable-image)
 
 
-;; Enable multi eww buffers
-(defun eww-mode-hook--rename-buffer ()
-  "Rename eww browser's buffer so sites open in new page."
-  (rename-buffer "eww" t))
-(add-hook 'eww-mode-hook 'eww-mode-hook--rename-buffer)
-
 
 ;; Make easy to search
 (defun eww-search (term)
