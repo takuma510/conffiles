@@ -90,4 +90,11 @@
 (add-hook 'ruby-mode-hook 'my-ruby-mode-hooks)
 
 
+
+;;; minitest
+
+(require 'minitest)
+(add-hook 'ruby-mode-hook 'minitest-mode)
+
+
 ;;; 21_ruby.el ends here

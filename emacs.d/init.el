@@ -79,6 +79,7 @@
     elscreen
     elscreen-persist
     company
+    minitest
     ))
 
 (let ((not-installed (loop for x in installing-package-list
