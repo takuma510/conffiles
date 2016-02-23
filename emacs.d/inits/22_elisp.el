@@ -44,11 +44,13 @@
 
 
 ;;; auto-complete
-
 (defun add-sources-to-ac-source ()
   (add-to-list 'ac-sources 'ac-source-symbols))
 (add-hook 'emacs-lisp-mode-hook 'add-sources-to-ac-source)
 
+
+;; Enable linum-mode on emacs-lisp-mode
+(add-hook 'emacs-lisp-mode-hook #'linum-on)
 
 
 (provide '22_elisp)

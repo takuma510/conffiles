@@ -67,5 +67,8 @@
 (require 'minitest)
 (add-hook 'ruby-mode-hook 'minitest-mode)
 
+;; Enable linum-mode on ruby-mode
+(add-hook 'ruby-mode-hook #'linum-on)
+
 
 ;;; 21_ruby.el ends here

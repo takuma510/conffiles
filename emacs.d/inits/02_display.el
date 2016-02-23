@@ -7,7 +7,7 @@
 (menu-bar-mode -1)
 (global-hl-line-mode t)
 (show-paren-mode t)
-(global-linum-mode t) ;; 行番号表示
+(global-linum-mode -1) ;; 行番号表示
 
 ;;; 画面分割
 
