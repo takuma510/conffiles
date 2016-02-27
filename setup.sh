@@ -3,7 +3,7 @@
 echo "setup conffiles..."
 
 echo "clean up links"
-rm ~/.zsh.d ~/.vim.d ~/.tmux.d ~/bin ~/.rubocop.yml
+rm ~/.zsh.d ~/.vim.d ~/.tmux.d ~/bin ~/.rubocop.yml ~/.emacs.d
 
 echo "setup ~/.emacs.d"
 ln -s ~/conffiles/emacs.d ~/.emacs.d
