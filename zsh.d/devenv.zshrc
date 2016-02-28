@@ -20,6 +20,14 @@ export RUBYOPT="-ropenssl"
 
 
 #
+# Python
+#
+
+# pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+
+#
 # Editor
 #
 export EDITOR=ec
