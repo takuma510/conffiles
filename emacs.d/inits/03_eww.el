@@ -7,6 +7,8 @@
 ;;; Code:
 
 
+(require 'eww)
+
 ;; Search Engine
 (setq eww-search-prefix "http://www.google.co.jp/search?q=") ;; default is duckduckgo
 
