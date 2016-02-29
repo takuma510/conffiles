@@ -22,6 +22,9 @@
 
 ;;; Others
 
+;; Notabs (https://www.emacswiki.org/emacs/NoTabs)
+(setq-default indent-tabs-mode nil)
+
 ;; undo-tree
 (require 'undo-tree)
 (global-undo-tree-mode)
