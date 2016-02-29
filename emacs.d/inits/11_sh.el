@@ -14,5 +14,8 @@
             (setq tab-width        2
                   sh-basic-offset  2)))
 
+;; Enable linum-mode
+(add-hook 'sh-mode-hook #'linum-on)
+
 
 ;;; 11_sh.el ends here
