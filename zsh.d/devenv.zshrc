@@ -26,6 +26,11 @@ export RUBYOPT="-ropenssl"
 # pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
+# awscli (installed with pyenv)
+if pyenv which aws_zsh_completer.sh 1>/dev/null 2>&1; then
+  source "$(pyenv which aws_zsh_completer.sh)"
+fi
+
 
 #
 # Editor
