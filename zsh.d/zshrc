@@ -1,8 +1,10 @@
 #### users generic .zshrc file
 
-## Completion configuration (brew install zsh-completions)
+## Completion configuration (brew install zsh-completions and brew related functions)
 #
-fpath=('/usr/local/share/zsh-completions' $fpath)
+for d in '/usr/local/share/zsh/site-functions' '/usr/local/share/zsh-completions'; do
+  fpath=($d $fpath)
+done
 autoload -U compinit
 compinit
 
