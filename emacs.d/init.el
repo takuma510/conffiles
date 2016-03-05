@@ -64,7 +64,6 @@
     scala-mode2
     ensime
     go-mode
-    go-autocomplete
     go-eldoc
     undo-tree
     init-loader

@@ -18,9 +18,7 @@
 
 
 ;;; auto-complete
-
 (require 'auto-complete-config)
-(global-auto-complete-mode t)
 
 ;; key-bind setting
 (setq ac-use-menu-map t)
