@@ -76,6 +76,7 @@
     elscreen
     elscreen-persist
     company
+    company-quickhelp
     minitest
     rust-mode
     ))

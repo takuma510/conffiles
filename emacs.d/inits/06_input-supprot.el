@@ -33,12 +33,12 @@
 (require 'company)
 (setq company-minimum-prefix-length 2)
 (setq company-selection-wrap-around t)
+(company-quickhelp 1)
 
 ;; kbd
 (define-key company-active-map (kbd "C-n") 'company-select-next)
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
 (define-key company-active-map (kbd "C-i") 'company-complete-selection)
-
 
 
 ;;; yasnippet
