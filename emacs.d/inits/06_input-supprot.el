@@ -64,6 +64,4 @@
                           (yas/expand))
                ad-do-it)))))
 
-
-(yas/advise-indent-function 'c-indent-line-or-region)  ; on groovy-mode
 (yas/advise-indent-function 'ruby-indent-command)  ; on ruby-mode
