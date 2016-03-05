@@ -22,6 +22,9 @@
 
 ;;; Others
 
+;; flycheck
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
 ;; Notabs (https://www.emacswiki.org/emacs/NoTabs)
 (setq-default indent-tabs-mode nil)
 
