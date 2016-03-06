@@ -1,23 +1,14 @@
 
-;;;; input support
-
-
 ;;; auto-insert
 
 (auto-insert-mode)
-
-;; templateファイル置き場
 (setq auto-insert-directory "~/.emacs.d/insert/")
-
-;; ruby-template
 (define-auto-insert "\\.rb$" "ruby-template.rb")
-
-;; sh-template
 (define-auto-insert "\\.sh$" "sh-template.sh")
 
 
-
 ;;; auto-complete
+
 (require 'auto-complete-config)
 
 ;; key-bind setting
@@ -27,9 +18,7 @@
 (define-key ac-menu-map (kbd "M-TAB") nil)
 
 
-
 ;;; company
-
 (require 'company)
 (setq company-minimum-prefix-length 2)
 (setq company-selection-wrap-around t)
@@ -44,24 +33,5 @@
 ;;; yasnippet
 
 (require 'yasnippet) ; not yasnippet-bundle
-(yas/initialize)
-(setq yas/root-directory '("~/.emacs.d/mysnippets"))
-
-;; Map `yas/load-directory' to every element
-(mapc 'yas/load-directory yas/root-directory)
-
 (yas-global-mode 1)
-
-
-;; enable yasnippet
-(defun yas/advise-indent-function (function-symbol)
-  (eval `(defadvice ,function-symbol (around yas/try-expand-first activate)
-           ,(format
-             "Try to expand a snippet before point, then call `%s' as usual"
-             function-symbol)
-           (let ((yas/fallback-behavior nil))
-             (unless (and (interactive-p)
-                          (yas/expand))
-               ad-do-it)))))
-
-(yas/advise-indent-function 'ruby-indent-command)  ; on ruby-mode
+(setq yas-snippet-dirs '("~/.emacs.d/mysnippets"))
