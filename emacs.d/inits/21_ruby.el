@@ -44,10 +44,10 @@
 ;; company
 (eval-after-load 'company
   '(push 'company-robe company-backends))
-(add-hook 'ruby-mode-hook 'company-mode)
 
 ;; style
 (setq ruby-deep-indent-paren-style nil)
+
 ;; アクセス修飾子のインデントを下げる
 (push "public"    ruby-block-mid-keywords)
 (push "protected" ruby-block-mid-keywords)

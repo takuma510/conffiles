@@ -41,6 +41,7 @@
 (require 'company)
 (setq company-minimum-prefix-length 2)
 (setq company-selection-wrap-around t)
+(global-company-mode t)
 (company-quickhelp-mode 1)
 
 ;; kbd

@@ -28,6 +28,9 @@
 (add-hook 'emacs-lisp-mode-hook 'add-sources-to-ac-source)
 (add-hook 'emacs-lisp-mode-hook 'auto-complete-mode)
 
+;; Disable company-mode
+(add-hook 'emacs-lisp-mode-hook (lambda () (company-mode -1)))
+
 
 ;; Enable linum-mode on emacs-lisp-mode
 (add-hook 'emacs-lisp-mode-hook #'linum-on)
