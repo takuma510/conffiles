@@ -17,5 +17,8 @@
 ;; Enable linum-mode
 (add-hook 'sh-mode-hook #'linum-on)
 
+;; auto-insert
+(define-auto-insert "\\.sh$" "sh-template.sh")
+
 
 ;;; 11_sh.el ends here

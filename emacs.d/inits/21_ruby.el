@@ -70,5 +70,8 @@
 ;; Enable linum-mode on ruby-mode
 (add-hook 'ruby-mode-hook #'linum-on)
 
+;; auto-insert
+(define-auto-insert "\\.rb$" "ruby-template.rb")
+
 
 ;;; 21_ruby.el ends here
