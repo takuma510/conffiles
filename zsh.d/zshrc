@@ -10,10 +10,24 @@ compinit
 
 ## load user .zshrc configuration file
 #
-[ -f ${HOME}/.zsh.d/path.zshrc ] && source ${HOME}/.zsh.d/path.zshrc
-[ -f ${HOME}/.zsh.d/alias.zshrc ] && source ${HOME}/.zsh.d/alias.zshrc
 [ -f ${HOME}/.zsh.d/devenv.zshrc ] && source ${HOME}/.zsh.d/devenv.zshrc
-[ -f ${HOME}/.zsh.d/mine.zshrc ] && source ${HOME}/.zsh.d/mine.zshrc
+[ -f ${HOME}/.zsh.d/mine.zshrc ]   && source ${HOME}/.zsh.d/mine.zshrc
+
+## Alias configuration
+#
+# expand aliases before completing
+#
+setopt complete_aliases     # aliased ls needs if file/dir completions work
+
+case "${OSTYPE}" in
+freebsd*|darwin*)
+    alias ls="ls -G -w"
+    ;;
+linux*)
+    alias ls="ls --color"
+    ;;
+esac
+
 
 ## Environment variable configuration
 #

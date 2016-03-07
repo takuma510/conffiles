@@ -42,6 +42,8 @@ function cd_gemsrc() {
 # default ruby opts
 export RUBYOPT="-ropenssl"
 
+# alias
+alias be="bundle exec"
 
 #
 # Python
@@ -66,6 +68,35 @@ export NVM_DIR="$HOME/.nvm"
 
 
 #
+# Golang
+#
+
+# path
+if [ -d $HOME/go ]; then
+  export GOPATH=$HOME/go
+  export PATH=$PATH:$GOPATH/bin
+fi
+
+
+#
+# Git
+#
+
+alias gst="git status -s -b"
+alias gcm="git commit -m "$*""
+alias gb="git branch -a"
+
+
+#
 # Editor
 #
+
 export EDITOR=ec
+alias emacs=ec
+
+
+# For ssh login with tmux
+alias ssh='TERM=screen ssh'
+
+# PATH
+export PATH=~/bin:/usr/local/bin:$PATH # brewで入れたコマンド優先
