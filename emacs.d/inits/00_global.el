@@ -57,6 +57,13 @@
 (setq yas-snippet-dirs '("~/.emacs.d/mysnippets"))
 
 
+;;; Buffer
+
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets) ;; filename<dir>形式のバッファ名にする
+(setq uniquify-ignore-buffers-re "*[^*]+*") ;; *で囲まれたファイル名は対象外にする
+
+
 ;;; Others
 
 ;; flycheck
