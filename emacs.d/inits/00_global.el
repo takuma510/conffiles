@@ -5,12 +5,6 @@
 ;;; Code:
 
 
-;;; auto-insert
-
-(auto-insert-mode)
-(setq auto-insert-directory "~/.emacs.d/insert/")
-
-
 ;;; auto-complete
 
 (require 'auto-complete-config)
