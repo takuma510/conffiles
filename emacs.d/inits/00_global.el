@@ -64,13 +64,43 @@
 (setq uniquify-ignore-buffers-re "*[^*]+*") ;; *で囲まれたファイル名は対象外にする
 
 
+;;; open-junk-file
+
+(require 'open-junk-file)
+(global-set-key (kbd "C-x C-z") 'open-junk-file) ;; C-x C-zで試行錯誤用のファイルを開く
+
+
 ;;; Others
+
+(savehist-mode t)            ;; 履歴を保存 
+(setq backup-inhibited t)    ;; バックアップファイル作成無効
+(setq make-backup-files nil) ;; バックアップファイル*.~作成無効化
+(setq auto-save-default nil) ;; バックアップファイル.#*無効化
+
+;; 自動保存
+(require 'auto-save-buffers-enhanced)
+(setq auto-save-buffers-enhanced-interval 1) ; 指定のアイドル秒で保存
+(auto-save-buffers-enhanced t)
+
+;; indent
+(setq c-tab-always-indent t)        ;; TABはつねに現在行の 字下げをやり直す
+(setq-default indent-tabs-mode nil) ;; インデントをタブでなく空白で(バッファ毎に設定可能)
+(setq indent-line-function 'indent-relative-maybe)  ;; 前と同じ行の幅にインデント
+
+;; session
+(require 'session)
+(add-hook 'after-init-hook 'session-initialize)
+
+;; resentf
+(require 'recentf-ext)
+(setq recentf-max-saved-items 3000)
 
 ;; flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; Notabs (https://www.emacswiki.org/emacs/NoTabs)
 (setq-default indent-tabs-mode nil)
+(setq-default tab-width 2) ;; タブは空白2文字で表示する
 
 ;; undo-tree
 (require 'undo-tree)
