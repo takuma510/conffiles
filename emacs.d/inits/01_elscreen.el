@@ -1,4 +1,4 @@
-;;; 05_elscreen.el --- elscreen settings             -*- lexical-binding: t; -*-
+;;; 01_elscreen.el --- elscreen settings
 
 ;;; Commentary:
 
@@ -20,4 +20,4 @@
 (elscreen-persist-mode 1)
 
 
-;;; 05_elscreen.el ends here
+;;; 01_elscreen.el ends here

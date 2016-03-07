@@ -1,8 +1,9 @@
-;;; 01_helm.el --- helm settings
+;;; 05_helm.el --- helm settings
 
 ;;; Commentary:
 
 ;;; Code:
+
 
 (require 'helm)
 
@@ -29,3 +30,6 @@
              (local-set-key (kbd "M-r") 'helm-gtags-find-rtag)
              (local-set-key (kbd "M-s") 'helm-gtags-find-symbol)
              (local-set-key (kbd "C-t") 'helm-gtags-pop-stack)))
+
+
+;;; 05_helm.el ends here
