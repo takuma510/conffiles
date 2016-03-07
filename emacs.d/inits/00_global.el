@@ -5,21 +5,6 @@
 ;;; Code:
 
 
-;;; Elscreen
-
-;; kbd
-(global-unset-key "\C-t")
-(setq elscreen-prefix-key (kbd "C-t"))
-(elscreen-start)
-
-;; settings
-(setq elscreen-display-tab nil)
-
-;; elscreen-persist
-(require 'elscreen-persist)
-(elscreen-persist-mode 1)
-
-
 ;;; auto-insert
 
 (auto-insert-mode)
@@ -34,20 +19,6 @@
 (define-key ac-menu-map (kbd "C-n")   'ac-next)
 (define-key ac-menu-map (kbd "C-p")   'ac-previous)
 (define-key ac-menu-map (kbd "M-TAB") nil)
-
-
-;;; company
-
-(require 'company)
-(setq company-minimum-prefix-length 2)
-(setq company-selection-wrap-around t)
-(global-company-mode t)
-(company-quickhelp-mode 1)
-
-;; kbd
-(define-key company-active-map (kbd "C-n") 'company-select-next)
-(define-key company-active-map (kbd "C-p") 'company-select-previous)
-(define-key company-active-map (kbd "C-i") 'company-complete-selection)
 
 
 ;;; yasnippet
