@@ -38,7 +38,6 @@
     ess
     magit
     haskell-mode
-    actionscript-mode
     helm
     helm-git-grep
     helm-gtags
