@@ -10,6 +10,7 @@
 (auto-insert-mode)
 (setq auto-insert-directory "~/.emacs.d/insert/")
 
+
 ;;; auto-complete
 
 (require 'auto-complete-config)
@@ -28,25 +29,26 @@
 (setq yas-snippet-dirs '("~/.emacs.d/mysnippets"))
 
 
-;;; Buffer
-
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'post-forward-angle-brackets) ;; filename<dir>形式のバッファ名にする
-(setq uniquify-ignore-buffers-re "*[^*]+*") ;; *で囲まれたファイル名は対象外にする
-
-
-;;; open-junk-file
-
-(require 'open-junk-file)
-(global-set-key (kbd "C-x C-z") 'open-junk-file) ;; C-x C-zで試行錯誤用のファイルを開く
-
-
 ;;; Others
 
-(savehist-mode t)            ;; 履歴を保存 
-(setq backup-inhibited t)    ;; バックアップファイル作成無効
-(setq make-backup-files nil) ;; バックアップファイル*.~作成無効化
-(setq auto-save-default nil) ;; バックアップファイル.#*無効化
+(require 'generic-x)                ; ジェネリックモード有効化
+(setq inhibit-startup-message t)    ; スタートアップ画面非表示
+(savehist-mode t)                   ; 履歴を保存
+(setq backup-inhibited t)           ; バックアップファイル作成無効
+(setq make-backup-files nil)        ; バックアップファイル*.~作成無効化
+(setq auto-save-default nil)        ; バックアップファイル.#*無効化
+(setq-default indent-tabs-mode nil) ; Notabs
+(setq-default tab-width 2)          ; タブは空白2文字で表示する
+
+
+;; uniquify
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets) ; filename<dir>形式
+(setq uniquify-ignore-buffers-re "*[^*]+*") ; *で囲まれたファイル名は対象外
+
+;; open-junk-file
+(require 'open-junk-file)
+(global-set-key (kbd "C-x C-z") 'open-junk-file) ; C-x C-zで試行錯誤用のファイルを開く
 
 ;; 自動保存
 (require 'auto-save-buffers-enhanced)
@@ -54,9 +56,9 @@
 (auto-save-buffers-enhanced t)
 
 ;; indent
-(setq c-tab-always-indent t)        ;; TABはつねに現在行の 字下げをやり直す
-(setq-default indent-tabs-mode nil) ;; インデントをタブでなく空白で(バッファ毎に設定可能)
-(setq indent-line-function 'indent-relative-maybe)  ;; 前と同じ行の幅にインデント
+(setq c-tab-always-indent t)        ; TABはつねに現在行の 字下げをやり直す
+(setq-default indent-tabs-mode nil) ; インデントをタブでなく空白で(バッファ毎に設定可能)
+(setq indent-line-function 'indent-relative-maybe)  ; 前と同じ行の幅にインデント
 
 ;; session
 (require 'session)
@@ -69,27 +71,17 @@
 ;; flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
-;; Notabs (https://www.emacswiki.org/emacs/NoTabs)
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 2) ;; タブは空白2文字で表示する
-
 ;; undo-tree
 (require 'undo-tree)
 (global-undo-tree-mode)
 
 ;; kbd
 (define-key global-map (kbd "C-c o") 'goto-line)
-(define-key global-map [?¥] [?\\])  ;; ¥の代わりに\を入力する
+(define-key global-map [?¥] [?\\])               ; ¥の代わりに\を入力する
 
 ;; 文字コード
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8)
-
-;; スタートアップ画面非表示
-(setq inhibit-startup-message t)
-
-;; ジェネリックモード有効化
-(require 'generic-x)
 
 ;; PATH from $SHELL
 (defun set-exec-path-from-shell-PATH ()
@@ -102,3 +94,5 @@
     (setenv "PATH" path-from-shell)
     (setq exec-path (split-string path-from-shell path-separator))))
 (set-exec-path-from-shell-PATH)
+
+;;; 00_global.el ends here
