@@ -79,6 +79,14 @@ fi
 
 
 #
+# Java
+#
+
+# jenv (installed with brew)
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
+
+#
 # Git
 #
 
