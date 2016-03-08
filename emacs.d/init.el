@@ -79,6 +79,7 @@
     minitest
     rust-mode
     web-mode
+    jdee
     ))
 
 (let ((not-installed (loop for x in installing-package-list
