@@ -16,13 +16,6 @@
 (define-key ac-menu-map (kbd "M-TAB") nil)
 
 
-;;; yasnippet
-
-(require 'yasnippet) ; not yasnippet-bundle
-(yas-global-mode 1)
-(setq yas-snippet-dirs '("~/.emacs.d/mysnippets"))
-
-
 ;;; Others
 
 (require 'generic-x)                ; ジェネリックモード有効化
@@ -33,7 +26,6 @@
 (setq auto-save-default nil)        ; バックアップファイル.#*無効化
 (setq-default indent-tabs-mode nil) ; Notabs
 (setq-default tab-width 2)          ; タブは空白2文字で表示する
-
 
 ;; uniquify
 (require 'uniquify)
