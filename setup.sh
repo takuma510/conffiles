@@ -3,7 +3,7 @@
 echo "setup conffiles..."
 
 echo "clean up links"
-rm ~/.zsh.d ~/.vim.d ~/.tmux.d ~/bin ~/.rubocop.yml ~/.emacs.d
+rm ~/.zsh.d ~/.vim.d ~/.tmux.d ~/bin ~/.rubocop.yml ~/.emacs.d ~/.tern-config
 
 echo "setup ~/.emacs.d"
 ln -s ~/conffiles/emacs.d ~/.emacs.d
@@ -28,5 +28,8 @@ ln -s ~/conffiles/bin ~/bin
 
 echo "setup ~/.rubocop.yml"
 ln -s ~/conffiles/rubocop.yml ~/.rubocop.yml
+
+echo "setup ~/.tern-config"
+ln -s ~/conffiles/tern-config ~/.tern-config
 
 echo "done... \^_^/"

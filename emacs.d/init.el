@@ -77,6 +77,7 @@
     elscreen-persist
     company
     company-quickhelp
+    company-tern
     minitest
     rust-mode
     web-mode
