@@ -1,5 +1,8 @@
+;;; 02_display.el -- display settings
 
-;;;; 画面表示の設定
+;;; Commentary:
+
+;;; Code:
 
 
 (tool-bar-mode -1)
@@ -7,9 +10,7 @@
 (menu-bar-mode -1)
 (global-hl-line-mode t)
 (show-paren-mode t)
-(global-linum-mode -1) ;; 行番号表示
-
-;;; 画面分割
+(global-linum-mode -1) ; 行番号表示
 
 ;; "C-=" (C-S--), "C-|"で画面分割
 (global-set-key (kbd "C-=") 'split-window-vertically)
@@ -21,10 +22,7 @@
 (global-set-key (kbd "C-c k") 'windmove-up)
 (global-set-key (kbd "C-c l") 'windmove-right)
 
-
-
-;;; 初期化用自作関数 各環境毎の設定ファイルで呼ぶ
-
+;; 初期化用自作関数 各環境毎の設定ファイルで呼ぶ
 (defun my-start-gui-emacs ()
   ;; start server for emacsclient
   (require 'server)
@@ -44,3 +42,6 @@
 
   ;; CUIではdefault-frame-alistを使わないほうが良さげ
   (set-background-color "black"))
+
+
+;;; 02_display.el ends here
