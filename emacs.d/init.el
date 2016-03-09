@@ -50,6 +50,7 @@
     dired-single
     markdown-mode
     yasnippet
+    helm-c-yasnippet
     rbenv
     inf-ruby
     ruby-electric
