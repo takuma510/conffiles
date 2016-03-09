@@ -5,6 +5,12 @@
 ;;; Code:
 
 
+;;; Zsh
+
+(setenv "SHELL" "/bin/zsh")
+(setq shell-file-name "/bin/zsh") ; M-x shell-command
+
+
 ;;; auto-complete
 
 (require 'auto-complete-config)
@@ -26,6 +32,7 @@
 (setq auto-save-default nil)        ; バックアップファイル.#*無効化
 (setq-default indent-tabs-mode nil) ; Notabs
 (setq-default tab-width 2)          ; タブは空白2文字で表示する
+(exec-path-from-shell-initialize)   ; inherit PATH from shell
 
 ;; uniquify
 (require 'uniquify)
@@ -69,16 +76,11 @@
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8)
 
-;; PATH from $SHELL
-(defun set-exec-path-from-shell-PATH ()
-  "Set up Emacs' `exec-path' and PATH environment variable to match that used by the user's shell.
-  This is particularly useful under Mac OSX, where GUI apps are not started from a shell."
+;; Open a current buffer with ATOM
+(defun open-atom ()
   (interactive)
-  (let ((path-from-shell
-         (replace-regexp-in-string "[ \t\n]*$" ""
-                                   (shell-command-to-string "$SHELL --login -i -c 'echo $PATH'"))))
-    (setenv "PATH" path-from-shell)
-    (setq exec-path (split-string path-from-shell path-separator))))
-(set-exec-path-from-shell-PATH)
+  (call-process
+   "atom" nil nil nil buffer-file-name))
+
 
 ;;; 00_global.el ends here
