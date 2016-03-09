@@ -80,6 +80,7 @@
     rust-mode
     web-mode
     jdee
+    emmet-mode
     ))
 
 (let ((not-installed (loop for x in installing-package-list
