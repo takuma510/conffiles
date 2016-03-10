@@ -1,10 +1,8 @@
+;;; init.el --- init
 
-;;;; init
+;;; Commentary:
 
-
-;;; Add load-path
-
-(add-to-list 'load-path "~/.emacs.d/manual-install")
+;;; Code:
 
 
 ;;; Install packages
@@ -85,7 +83,6 @@
     emmet-mode
     exec-path-from-shell
     ))
-
 (let ((not-installed (loop for x in installing-package-list
                             when (not (package-installed-p x))
                             collect x)))
@@ -95,7 +92,9 @@
         (package-install pkg))))
 
 
-;;; Load init-loader path
-
+;; Load init-loader path
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
+
+
+;;; init.el ends here
