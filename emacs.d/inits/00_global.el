@@ -68,6 +68,10 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
+;; winner-undo
+(winner-mode 1)
+(global-set-key (kbd "C-q") 'winner-undo)
+
 ;; kbd
 (define-key global-map (kbd "C-c o") 'goto-line)
 (define-key global-map [?¥] [?\\])               ; ¥の代わりに\を入力する
