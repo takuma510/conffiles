@@ -5,20 +5,11 @@
 ;;; Code:
 
 
-;;; Install packages
-
-;; Usage
-;; M-x package-list-packages -> i(check install pkg), x(exec install)
+;; Install packages
 (require 'package)
-
-;; add package-archives server
-(add-to-list 'package-archives
-             '("melpa" .     "http://melpa.milkbox.net/packages/"))
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
-
-;; install pkg automatically (ref. http://qiita.com/catatsuy/items/5f1cd86e2522fd3384a0)
 (require 'cl)
 (defvar installing-package-list
   '(
