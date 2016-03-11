@@ -11,14 +11,10 @@
 ;; indent
 (add-hook 'sh-mode-hook
           (lambda ()
-            (setq tab-width        2
-                  sh-basic-offset  2)))
+            (setq tab-width       2
+                  sh-basic-offset 2)))
 
-;; Enable linum-mode
-(add-hook 'sh-mode-hook #'linum-on)
-
-;; auto-insert
-(define-auto-insert "\\.sh$" "sh-template.sh")
+(add-hook 'sh-mode-hook #'linum-on) ; Enable linum-mode
 
 
 ;;; 11_sh.el ends here
