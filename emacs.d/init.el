@@ -18,10 +18,6 @@
     android-mode
     php-mode
     php-extras
-    flymake
-    flymake-php
-    flymake-cursor
-    flymake-easy
     js2-mode
     tss
     ess
@@ -49,7 +45,6 @@
     igrep
     open-junk-file
     recentf-ext
-    elpy
     scala-mode2
     ensime
     go-mode
@@ -58,7 +53,6 @@
     init-loader
     elixir-mode
     elixir-yasnippets
-    flymake-elixir
     alchemist
     flycheck
     dayone
