@@ -11,6 +11,7 @@
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
 (add-hook 'web-mode-hook #'linum-on)
+(setq web-mode-markup-indent-offset 2) ;; indent
 
 
 ;;; 04_webmode.el ends here
