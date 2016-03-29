@@ -28,7 +28,13 @@
 (add-hook 'ruby-mode-hook 'robe-mode)
 (autoload 'robe-mode
   "robe" "Code navigation, documentation lookup and completion for Ruby" t nil)
-(add-hook 'robe-mode-hook 'robe-start)
+(add-hook 'robe-mode-hook
+          (lambda ()
+            (save-excursion
+              (window-configuration-to-register 'window-conf)
+              (inf-ruby)
+              (robe-start)
+              (jump-to-register 'window-conf))))
 
 ;; company
 (eval-after-load 'company
