@@ -2,3 +2,4 @@ bundler
 pry
 pry-doc
 rails --pre
+ripper-tags
