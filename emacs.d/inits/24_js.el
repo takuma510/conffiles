@@ -12,6 +12,9 @@
 (add-hook 'js2-mode-hook 'tern-mode)
 (add-to-list 'company-backends 'company-tern)
 
+;; js2-jsx-mode
+(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . js2-jsx-mode))
+
 ;; generate html5 project
 (setq-default html5-project-directory "~/src/js")
 (setq-default html5-template "~/.emacs.d/project-template/html5/")
