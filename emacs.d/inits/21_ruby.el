@@ -53,8 +53,8 @@
 (require 'minitest)
 (add-hook 'ruby-mode-hook 'minitest-mode)
 
-;; Enable linum-mode on ruby-mode
-(add-hook 'ruby-mode-hook #'linum-on)
+(add-hook 'ruby-mode-hook #'linum-on)         ; Enable linum-mode
+(setq ruby-insert-encoding-magic-comment nil) ; Disable encoding magic comment
 
 
 ;;; 21_ruby.el ends here
