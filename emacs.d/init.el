@@ -67,6 +67,7 @@
     emmet-mode
     exec-path-from-shell
     rainbow-mode
+    scss-mode
     ))
 (let ((not-installed (loop for x in installing-package-list
                             when (not (package-installed-p x))
