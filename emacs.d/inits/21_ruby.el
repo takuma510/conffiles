@@ -46,6 +46,7 @@
 ;; ruby-mode-hook
 (defun my-ruby-mode-hooks ()
   (ruby-electric-mode t)
+  (setq flycheck-checker 'ruby-rubocop)
   (ruby-block-mode t))
 (add-hook 'ruby-mode-hook 'my-ruby-mode-hooks)
 
