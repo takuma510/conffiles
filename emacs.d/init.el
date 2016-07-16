@@ -70,6 +70,7 @@
     scss-mode
     coffee-mode
     esa
+    yaml-mode
     ))
 (let ((not-installed (loop for x in installing-package-list
                             when (not (package-installed-p x))
