@@ -32,4 +32,7 @@ ln -s ~/conffiles/rubocop.yml ~/.rubocop.yml
 echo "setup ~/.tern-config"
 ln -s ~/conffiles/tern-config ~/.tern-config
 
+echo "setup ~/.pryrc"
+ln -s ~/conffiles/pryrc ~/.pryrc
+
 echo "done... \^_^/"
