@@ -15,9 +15,6 @@
   '(
     ;; ここに使っているパッケージを書く。
     slim-mode
-    android-mode
-    php-mode
-    php-extras
     js2-mode
     tss
     ess
