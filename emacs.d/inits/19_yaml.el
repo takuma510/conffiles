@@ -6,6 +6,6 @@
 
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
-(setq yaml-indent-offset 4)
+(setq yaml-indent-offset 2)
 
 ;;; 19_yaml.el ends here
