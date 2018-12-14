@@ -108,3 +108,11 @@ alias ssh='TERM=screen ssh'
 
 # PATH
 export PATH=~/bin:/usr/local/bin:$PATH # brewで入れたコマンド優先
+
+
+#
+# AWS
+#
+
+# ssm by tag:Name
+alias sm=$HOME/.zsh.d/utils/ssm.sh
