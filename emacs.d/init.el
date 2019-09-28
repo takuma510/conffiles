@@ -47,7 +47,6 @@
     company-quickhelp
     company-tern
     minitest
-    rust-mode
     web-mode
     jdee
     emmet-mode
