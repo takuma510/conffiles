@@ -40,9 +40,6 @@
     go-eldoc
     undo-tree
     init-loader
-    elixir-mode
-    elixir-yasnippets
-    alchemist
     flycheck
     elscreen
     elscreen-persist
