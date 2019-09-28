@@ -23,32 +23,8 @@
 (require 'ruby-block)
 (setq ruby-block-highlight-toggle t)
 
-;; robe
-(require 'robe)
-(add-hook 'ruby-mode-hook 'robe-mode)
-(autoload 'robe-mode
-  "robe" "Code navigation, documentation lookup and completion for Ruby" t nil)
-(add-hook 'robe-mode-hook
-          (lambda ()
-            (save-excursion
-              (window-configuration-to-register 'window-conf)
-              (inf-ruby)
-              (robe-start)
-              (jump-to-register 'window-conf))))
-
-;; company
-(eval-after-load 'company
-  '(push 'company-robe company-backends))
-
 ;; style
 (setq ruby-deep-indent-paren-style nil)
-
-;; ruby-mode-hook
-(defun my-ruby-mode-hooks ()
-  (ruby-electric-mode t)
-  (setq flycheck-checker 'ruby-rubocop)
-  (ruby-block-mode t))
-(add-hook 'ruby-mode-hook 'my-ruby-mode-hooks)
 
 ;; minitest
 (require 'minitest)
