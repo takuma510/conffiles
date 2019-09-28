@@ -46,7 +46,6 @@
     elixir-yasnippets
     alchemist
     flycheck
-    dayone
     elscreen
     elscreen-persist
     company
