@@ -16,11 +16,9 @@
 (global-set-key (kbd "C-=") 'split-window-vertically)
 (global-set-key (kbd "C-|") 'split-window-horizontally)
 
-;; windmove with "C-c-hjkl"
-(global-set-key (kbd "C-c h") 'windmove-left)
-(global-set-key (kbd "C-c j") 'windmove-down)
-(global-set-key (kbd "C-c k") 'windmove-up)
-(global-set-key (kbd "C-c l") 'windmove-right)
+;; https://github.com/abo-abo/ace-window
+(global-set-key (kbd "M-o") 'ace-window)
+(setq aw-keys '(?j ?k ?l ?i ?o ?h ?y ?u ?p))
 
 ;; 初期化用自作関数 各環境毎の設定ファイルで呼ぶ
 (defun my-start-gui-emacs ()

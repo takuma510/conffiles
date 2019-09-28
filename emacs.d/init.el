@@ -14,6 +14,7 @@
 (defvar installing-package-list
   '(
     ;; ここに使っているパッケージを書く。
+    ace-window
     slim-mode
     js2-mode
     tss
