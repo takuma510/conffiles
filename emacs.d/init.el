@@ -19,7 +19,6 @@
     tss
     ess
     magit
-    haskell-mode
     counsel
     popup
     viewer
