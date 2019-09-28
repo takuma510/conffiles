@@ -40,8 +40,6 @@
     undo-tree
     init-loader
     flycheck
-    elscreen
-    elscreen-persist
     company
     company-quickhelp
     company-tern
