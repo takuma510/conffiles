@@ -45,7 +45,6 @@
     company-tern
     minitest
     web-mode
-    jdee
     emmet-mode
     exec-path-from-shell
     rainbow-mode
