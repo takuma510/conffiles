@@ -36,8 +36,6 @@
     igrep
     open-junk-file
     recentf-ext
-    scala-mode2
-    ensime
     go-mode
     go-eldoc
     undo-tree
