@@ -20,9 +20,7 @@
     ess
     magit
     haskell-mode
-    helm
-    helm-git-grep
-    helm-gtags
+    counsel
     popup
     viewer
     auto-save-buffers-enhanced
@@ -31,7 +29,6 @@
     dired-single
     markdown-mode
     yasnippet
-    helm-c-yasnippet
     inf-ruby
     ruby-electric
     ruby-block
