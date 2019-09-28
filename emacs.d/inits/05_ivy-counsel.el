@@ -9,4 +9,6 @@
 (counsel-mode 1)
 ;; M-x, C-x C-fなどのEmacsの基本的な組み込みコマンドをivy版にリマップする
 
+(define-key global-map (kbd "C-;") 'counsel-recentf)
+
 ;;; 05_ivy-counsel.el ends here
