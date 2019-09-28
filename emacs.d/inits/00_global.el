@@ -11,17 +11,6 @@
 (setq shell-file-name "/bin/zsh") ; M-x shell-command
 
 
-;;; auto-complete
-
-(require 'auto-complete-config)
-
-;; key-bind setting
-(setq ac-use-menu-map t)
-(define-key ac-menu-map (kbd "C-n")   'ac-next)
-(define-key ac-menu-map (kbd "C-p")   'ac-previous)
-(define-key ac-menu-map (kbd "M-TAB") nil)
-
-
 ;;; Others
 
 (require 'generic-x)                ; ジェネリックモード有効化

@@ -22,12 +22,6 @@
 (add-hook 'ielm-mode-hook 'enable-paredit-mode)
 
 
-;;; auto-complete
-(defun add-sources-to-ac-source ()
-  (add-to-list 'ac-sources 'ac-source-symbols))
-(add-hook 'emacs-lisp-mode-hook 'add-sources-to-ac-source)
-(add-hook 'emacs-lisp-mode-hook 'auto-complete-mode)
-
 ;; Disable company-mode
 (add-hook 'emacs-lisp-mode-hook (lambda () (company-mode -1)))
 

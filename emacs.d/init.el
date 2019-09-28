@@ -24,7 +24,6 @@
     helm-git-grep
     helm-gtags
     popup
-    auto-complete
     viewer
     auto-save-buffers-enhanced
     session
