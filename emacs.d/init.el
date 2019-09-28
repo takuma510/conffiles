@@ -64,7 +64,6 @@
     exec-path-from-shell
     rainbow-mode
     scss-mode
-    coffee-mode
     yaml-mode
     ))
 (let ((not-installed (loop for x in installing-package-list
