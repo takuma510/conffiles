@@ -14,5 +14,7 @@
 (global-set-key (kbd "C-;") 'counsel-recentf)
 (global-set-key (kbd "C-c g") 'counsel-git)
 (global-set-key (kbd "C-c j") 'counsel-git-grep)
+(global-set-key (kbd "C-c k") 'counsel-ag)
+(global-set-key (kbd "C-c l") 'counsel-locate)
 
 ;;; 05_ivy-counsel.el ends here
