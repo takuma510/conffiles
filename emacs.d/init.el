@@ -14,6 +14,8 @@
 (defvar installing-package-list
   '(
     ;; ここに使っているパッケージを書く。
+    lsp-mode
+    company-lsp
     ace-window
     slim-mode
     js2-mode
