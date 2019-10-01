@@ -15,6 +15,7 @@
   '(
     ;; ここに使っているパッケージを書く。
     lsp-mode
+    lsp-ui
     company-lsp
     ace-window
     slim-mode
