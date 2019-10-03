@@ -20,6 +20,9 @@
 (global-set-key (kbd "M-o") 'ace-window)
 (setq aw-keys '(?j ?k ?l ?i ?o ?h ?y ?u ?p))
 
+(require 'neotree)
+(global-set-key (kbd "<f8>") 'neotree-toggle)
+
 ;; 初期化用自作関数 各環境毎の設定ファイルで呼ぶ
 (defun my-start-gui-emacs ()
   ;; start server for emacsclient

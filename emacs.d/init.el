@@ -54,6 +54,7 @@
     rainbow-mode
     scss-mode
     yaml-mode
+    neotree
     ))
 (let ((not-installed (loop for x in installing-package-list
                             when (not (package-installed-p x))
