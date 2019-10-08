@@ -9,3 +9,8 @@
 
 - https://solargraph.org/ を使う
 - `gem i solargraph`
+
+### Golang
+
+- 公式でちゃんとメンテされそうな https://github.com/golang/tools/tree/master/gopls を使う
+- `go get golang.org/x/tools/gopls@latest`
