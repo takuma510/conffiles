@@ -57,16 +57,6 @@ if pyenv which aws_zsh_completer.sh 1>/dev/null 2>&1; then
   source "$(pyenv which aws_zsh_completer.sh)"
 fi
 
-
-#
-# Node.js
-#
-
-# nvm (installed with official cli script)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-
 #
 # Golang
 #
@@ -108,6 +98,14 @@ alias ssh='TERM=screen ssh'
 
 # PATH
 export PATH=~/bin:/usr/local/bin:$PATH # brewで入れたコマンド優先
+
+
+#
+# Node.js
+#
+
+# nodenv
+eval "$(nodenv init -)"
 
 
 #
