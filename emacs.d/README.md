@@ -14,3 +14,8 @@
 
 - 公式でちゃんとメンテされそうな https://github.com/golang/tools/tree/master/gopls を使う
 - `go get golang.org/x/tools/gopls@latest`
+
+### JavaScript/TypeScript
+
+- https://github.com/sourcegraph/javascript-typescript-langserver
+- `npm i javascript-typescript-langserver -g`

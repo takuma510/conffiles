@@ -46,7 +46,6 @@
     flycheck
     company
     company-quickhelp
-    company-tern
     minitest
     web-mode
     emmet-mode
