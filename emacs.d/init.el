@@ -20,7 +20,7 @@
     ace-window
     slim-mode
     js2-mode
-    tss
+    typescript-mode
     ess
     magit
     counsel
