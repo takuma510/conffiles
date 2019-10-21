@@ -19,20 +19,11 @@
 ;; テンプレート
 (setq org-gtd-directory (concat org-directory "gtd/"))
 (setq org-capture-templates
-      '(("t" "Todo" entry
-         (file+headline
-          (expand-file-name "action.org" org-gtd-directory)
-          "Inbox")
+      '(("t" "Todo" entry (file+headline "~/docs/gtd/action.org" "Inbox")
          "** TODO %?\n %i\n %a\n %t")
-        ("i" "Idea" entry
-         (file+headline
-          (expand-file-name "inbox.org" org-gtd-directory)
-          "New Ideas")
+        ("i" "Idea" entry (file+headline "~/docs/gtd/inbox.org" "New Ideas")
          "** %?\n %i\n %a\n %t")
-        ("c" "Schedule" entry
-         (file+headline
-          (expand-file-name "ical.org" org-gtd-directory)
-          "Schedule")
+        ("c" "Schedule" entry (file+headline "~/docs/gtd/ical.org" "Schedule")
          "** TODO %?\n\t")))
 
 ;; kbd
