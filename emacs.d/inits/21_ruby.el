@@ -7,6 +7,7 @@
 
 ;; ruby-mode files
 (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.ruby$" . ruby-mode))
 
 ;; ruby-electric
 (require 'ruby-electric)
