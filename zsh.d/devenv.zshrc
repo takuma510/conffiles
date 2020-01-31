@@ -67,6 +67,12 @@ if [ -d $HOME/go ]; then
   export PATH=$PATH:$GOPATH/bin
 fi
 
+# goenv. see https://github.com/syndbg/goenv/blob/master/INSTALL.md
+if which goenv > /dev/null;then
+  export GOENV_ROOT=$HOME/.goenv
+  export PATH=$GOENV_ROOT/bin:$PATH
+  eval "$(goenv init -)"
+fi
 
 #
 # Java
