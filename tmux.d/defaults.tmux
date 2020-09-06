@@ -12,8 +12,8 @@ unbind r
 bind   r source-file ~/.tmux.conf
 
 
-# バックスクロール行数を1万行に
-set-option -g history-limit 10000
+# バックスクロール行数を10万行に
+set-option -g history-limit 100000
 
 
 # 256色ターミナル
