@@ -105,6 +105,11 @@ alias ssh='TERM=screen ssh'
 # PATH
 export PATH=~/bin:/usr/local/bin:$PATH # brewで入れたコマンド優先
 
+#
+# brew
+#
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 #
 # Node.js
