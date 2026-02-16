@@ -83,6 +83,8 @@
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8)
 
+;; ruby
+(setq ruby-insert-encoding-magic-comment nil) ; Disable encoding magic comment
 
 ;; 02_display.el -- display settings
 (tool-bar-mode -1)
