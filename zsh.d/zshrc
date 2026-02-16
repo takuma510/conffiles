@@ -2,7 +2,7 @@
 
 ## Completion configuration (brew install zsh-completions and brew related functions)
 #
-for d in '/usr/local/share/zsh/site-functions' '/usr/local/share/zsh-completions'; do
+for d in '/usr/local/share/zsh/site-functions' '/usr/local/share/zsh-completions' '/opt/homebrew/share/zsh/site-functions'; do
   fpath=($d $fpath)
 done
 autoload -U compinit

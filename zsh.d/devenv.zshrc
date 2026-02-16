@@ -95,8 +95,7 @@ alias gb="git branch -a"
 # Editor
 #
 
-export EDITOR=ec
-alias emacs=ec
+export EDITOR=vim
 
 
 # For ssh login with tmux
@@ -125,3 +124,10 @@ eval "$(nodenv init -)"
 
 # ssm by tag:Name
 alias sm=$HOME/.zsh.d/utils/ssm.sh
+
+#
+# dotnet
+#
+
+# package download binary
+alias dotnet=/usr/local/share/dotnet/dotnet
