@@ -46,6 +46,20 @@ bind -n S-right select-pane -R
 bind-key -T copy-mode-emacs C-Enter send-keys -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
 
 
+# コピーモード(vi)でのページ移動
+# Ctrl+P で1ページ上に、Ctrl+N で1ページ下に移動
+
+bind-key -T copy-mode-vi C-p send-keys -X page-up
+bind-key -T copy-mode-vi C-n send-keys -X page-down
+
+
+# コピーモード(vi)でmacOSクリップボードにコピー
+# Enterキーでコピーしてコピーモードを終了し、クリップボードにも保存
+
+bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "pbcopy"
+bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "pbcopy"
+
+
 #### COLOUR (Solarized 256)
 
 # default statusbar colors
