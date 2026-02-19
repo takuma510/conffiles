@@ -74,6 +74,7 @@ set-window-option -g window-status-current-style fg=colour166,bg=default
 #set-window-option -g window-status-current-attr bright
 
 # pane border
+set-option -g pane-border-lines double
 set-option -g pane-border-style fg=colour235
 set-option -g pane-active-border-style fg=colour240
 
