@@ -60,6 +60,28 @@ bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "pbcopy"
 bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "pbcopy"
 
 
+# agentic coding 並列作業向け設定
+
+# ペインタイトル表示（上部に表示）
+set-option -g pane-border-status top
+set-option -g pane-border-format " #{pane_index}: #{pane_title} "
+
+# ペイン同期（全ペインに同じコマンドを一斉送信）
+# Prefix + e で有効、Prefix + E で無効
+bind e setw synchronize-panes on
+bind E setw synchronize-panes off
+
+# マウス操作有効化
+set-option -g mouse on
+
+# ウィンドウ・ペインの自動リネーム無効化
+set-option -g allow-rename off
+set-window-option -g automatic-rename off
+
+# ペイン番号表示時間を3秒に延長（Prefix + q）
+set-option -g display-panes-time 3000
+
+
 #### COLOUR (Solarized 256)
 
 # default statusbar colors
@@ -76,7 +98,7 @@ set-window-option -g window-status-current-style fg=colour166,bg=default
 # pane border
 set-option -g pane-border-lines double
 set-option -g pane-border-style fg=colour235
-set-option -g pane-active-border-style fg=colour240
+set-option -g pane-active-border-style fg=colour214
 
 # message text
 set-option -g message-style bg=colour235,fg=colour166
