@@ -4,6 +4,12 @@
 bind C-t next-window
 
 
+# 新しいウィンドウを main-vertical レイアウトで開く
+# 左にメインペイン（大）、右にサブペイン（小）の2ペイン構成
+
+bind c new-window \; split-window -h \; select-layout main-vertical \; select-pane -t 0
+
+
 # ウィンドウを(ペインに)分割
 # ＜Prefix＞＜v＞、＜Prefix＞＜h＞と入力するだけで分割できるようにします。
 
