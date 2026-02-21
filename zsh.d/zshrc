@@ -5,8 +5,12 @@
 for d in '/usr/local/share/zsh/site-functions' '/usr/local/share/zsh-completions' '/opt/homebrew/share/zsh/site-functions'; do
   fpath=($d $fpath)
 done
-autoload -U compinit
-compinit
+autoload -Uz compinit
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
 
 ## load user .zshrc configuration file
 #

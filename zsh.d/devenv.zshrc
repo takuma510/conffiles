@@ -3,12 +3,11 @@
 #
 
 # rbenv
-if which rbenv > /dev/null; then
-  export PATH=$HOME/.rbenv/bin:$PATH
-  eval "$(rbenv init - zsh)"
+if [[ -x $HOME/.rbenv/bin/rbenv ]]; then
+  export PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH
 
-  # plugins
-  local d=$(rbenv root)/plugins
+  # one-time plugin/symlink setup (skipped if dirs already exist)
+  local d=$HOME/.rbenv/plugins
   if [ ! -d $d ]; then mkdir -p $d; fi
   if [ ! -d $d/rbenv-ctags ]; then
     git clone git://github.com/tpope/rbenv-ctags.git $d/rbenv-ctags
@@ -22,11 +21,15 @@ if which rbenv > /dev/null; then
   if [ ! -d $d/gem-src ]; then
     git clone git://github.com/amatsuda/gem-src.git $d/gem-src
   fi
-
-  # default-gems
-  if [ ! -e $(rbenv root)/default-gems ]; then
-    ln -s ~/conffiles/default-gems $(rbenv root)/default-gems
+  if [ ! -e $HOME/.rbenv/default-gems ]; then
+    ln -s ~/conffiles/default-gems $HOME/.rbenv/default-gems
   fi
+
+  rbenv() {
+    unfunction rbenv
+    eval "$(command rbenv init - zsh)"
+    rbenv "$@"
+  }
 fi
 
 # gem-src root directory (https://github.com/amatsuda/gem-src)
@@ -50,11 +53,18 @@ alias be="bundle exec"
 #
 
 # pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if [[ -x $HOME/.pyenv/bin/pyenv ]]; then
+  export PYENV_ROOT=$HOME/.pyenv
+  export PATH=$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH
 
-# awscli (installed with pyenv)
-if pyenv which aws_zsh_completer.sh 1>/dev/null 2>&1; then
-  source "$(pyenv which aws_zsh_completer.sh)"
+  pyenv() {
+    unfunction pyenv
+    eval "$(command pyenv init -)"
+    if command pyenv which aws_zsh_completer.sh 1>/dev/null 2>&1; then
+      source "$(command pyenv which aws_zsh_completer.sh)"
+    fi
+    pyenv "$@"
+  }
 fi
 
 #
@@ -68,10 +78,15 @@ if [ -d $HOME/go ]; then
 fi
 
 # goenv. see https://github.com/syndbg/goenv/blob/master/INSTALL.md
-if which goenv > /dev/null;then
+if [[ -x $HOME/.goenv/bin/goenv ]]; then
   export GOENV_ROOT=$HOME/.goenv
-  export PATH=$GOENV_ROOT/bin:$PATH
-  eval "$(goenv init -)"
+  export PATH=$GOENV_ROOT/bin:$GOENV_ROOT/shims:$PATH
+
+  goenv() {
+    unfunction goenv
+    eval "$(command goenv init -)"
+    goenv "$@"
+  }
 fi
 
 #
@@ -79,7 +94,15 @@ fi
 #
 
 # jenv (installed with brew)
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+if [[ -x $HOME/.jenv/bin/jenv ]]; then
+  export PATH=$HOME/.jenv/bin:$HOME/.jenv/shims:$PATH
+
+  jenv() {
+    unfunction jenv
+    eval "$(command jenv init -)"
+    jenv "$@"
+  }
+fi
 
 
 #
@@ -107,7 +130,6 @@ export PATH=~/bin:/usr/local/bin:$PATH # brewで入れたコマンド優先
 #
 # brew
 #
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 #
