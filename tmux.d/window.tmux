@@ -77,9 +77,6 @@ set-option -g pane-border-format " #{pane_index}: #{pane_title} "
 bind e setw synchronize-panes on
 bind E setw synchronize-panes off
 
-# マウス操作有効化
-set-option -g mouse on
-
 # ウィンドウ・ペインの自動リネーム無効化
 set-option -g allow-rename off
 set-window-option -g automatic-rename off
