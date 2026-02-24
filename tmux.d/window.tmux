@@ -4,10 +4,17 @@
 bind C-t next-window
 
 
-# 新しいウィンドウを main-vertical レイアウトで開く
-# 左にメインペイン（大）、右にサブペイン（小）の2ペイン構成
+# 新しいウィンドウを4ペイン構成で開く
+# 左にメインペイン（大）、右に3つのサブペインを縦分割
+# ┌─────────────┬────┐
+# │             │ S1 │
+# │  Main Pane  ├────┤
+# │             │ S2 │
+# │             ├────┤
+# │             │ S3 │
+# └─────────────┴────┘
 
-bind c new-window \; split-window -h \; select-layout main-vertical \; select-pane -t 0
+bind c new-window \; split-window -h \; split-window -v \; split-window -v \; select-layout main-vertical \; select-pane -t 0
 
 
 # ウィンドウを(ペインに)分割
