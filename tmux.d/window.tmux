@@ -68,9 +68,11 @@ bind-key -T copy-mode-vi C-n send-keys -X page-down
 
 # コピーモード(vi)でmacOSクリップボードにコピー
 # Enterキーでコピーしてコピーモードを終了し、クリップボードにも保存
+# yy で現在行全体をコピー（Vim風）
 
 bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "pbcopy"
 bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "pbcopy"
+bind-key -T copy-mode-vi y y send-keys -X copy-line \; send-keys -X copy-pipe-and-cancel "pbcopy"
 
 
 # agentic coding 並列作業向け設定
