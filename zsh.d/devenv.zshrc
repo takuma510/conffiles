@@ -1,3 +1,11 @@
+# PATH設定（最優先で設定）
+export PATH=~/bin:/usr/local/bin:$PATH # brewで入れたコマンド優先
+
+#
+# brew
+#
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 #
 # Ruby
 #
@@ -78,7 +86,7 @@ if [ -d $HOME/go ]; then
 fi
 
 # goenv. see https://github.com/syndbg/goenv/blob/master/INSTALL.md
-if [[ -x $HOME/.goenv/bin/goenv ]]; then
+if command -v goenv >/dev/null 2>&1; then
   export GOENV_ROOT=$HOME/.goenv
   export PATH=$GOENV_ROOT/bin:$GOENV_ROOT/shims:$PATH
 
@@ -123,14 +131,6 @@ export EDITOR=vim
 
 # For ssh login with tmux
 alias ssh='TERM=screen ssh'
-
-# PATH
-export PATH=~/bin:/usr/local/bin:$PATH # brewで入れたコマンド優先
-
-#
-# brew
-#
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 #
 # AWS
