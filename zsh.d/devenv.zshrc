@@ -57,6 +57,21 @@ export RUBYOPT="-ropenssl"
 alias be="bundle exec"
 
 #
+# Node.js
+#
+
+# nodenv
+if command -v nodenv >/dev/null 2>&1; then
+  export PATH=$HOME/.nodenv/bin:$HOME/.nodenv/shims:$PATH
+
+  nodenv() {
+    unfunction nodenv
+    eval "$(command nodenv init -)"
+    nodenv "$@"
+  }
+fi
+
+#
 # Python
 #
 
