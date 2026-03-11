@@ -6,6 +6,7 @@ for d in '/usr/local/share/zsh/site-functions' '/usr/local/share/zsh-completions
   fpath=($d $fpath)
 done
 autoload -Uz compinit
+setopt extended_glob
 if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
   compinit
 else
@@ -46,9 +47,9 @@ export LANG=ja_JP.UTF-8
 #
 autoload colors
 colors
-local p_cdir="%B%F{blue}[%~]%f%b"$'\n'
-local p_info="%F{red}%n%f"
-local p_mark="%B%(!,#,%%)%b "
+p_cdir="%B%F{blue}[%~]%f%b"$'\n'
+p_info="%F{red}%n%f"
+p_mark="%B%(!,#,%%)%b "
 PROMPT="$p_info $p_cdir$p_mark"
 PROMPT2="(%_) %(!,#,%%) "
 [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
